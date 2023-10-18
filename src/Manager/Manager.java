@@ -79,7 +79,6 @@ public class Manager {
             System.out.println("Tasks.Task с id - " + task.getId() + " не найдено");
             return;
         }
-        tasks.remove(task.getId());
         tasks.put(task.getId(), task);
     }
 
@@ -89,8 +88,8 @@ public class Manager {
             System.out.println("Tasks.Epic с id - " + epic.getId() + " не найдено");
             return;
         }
-        epics.get(epic.getId()).setNameTask(epic.getName());
-        epics.get(epic.getId()).setTaskDescription(epic.getTaskDescription());
+        epic.setSubtaskId(epics.get(epic.getId()).getSubtaskId());
+        epics.put(epic.getId(),epic);
 
         updateStatusEpic(epics.get(epic.getId()).getId());
     }
@@ -101,9 +100,8 @@ public class Manager {
             System.out.println("Tasks.Subtask с id - " + subtask.getId() + " не найдено");
             return;
         }
-        subtasks.get(subtask.getId()).setNameTask(subtask.getName());
-        subtasks.get(subtask.getId()).setTaskDescription(subtask.getTaskDescription());
-        subtasks.get(subtask.getId()).setStatus(subtask.getStatus());
+        subtask.setEpicId(subtasks.get(subtask.getId()).getEpicId());
+        subtasks.put(subtask.getId(),subtask);
 
         updateStatusEpic(subtasks.get(subtask.getId()).getEpicId());
     }
@@ -130,13 +128,12 @@ public class Manager {
     }
 
     public void deleteSubtaskById(int id) {
-        int epicId;
+        int epicId = subtasks.get(id).getEpicId();
 
         if (!subtasks.containsKey(id)) {
             System.out.println("Tasks.Subtask с id - " + id + " не найдено");
             return;
         }
-        epicId = subtasks.get(id).getEpicId();
         int idSub = epics.get(subtasks.get(id).getEpicId()).getSubtaskId().indexOf(id);
         epics.get(subtasks.get(id).getEpicId()).getSubtaskId().remove(idSub);
         subtasks.remove(id);
@@ -153,7 +150,7 @@ public class Manager {
         return subtaskArrayList;
     }
 
-    public void updateStatusEpic(int epicId) {
+    private void updateStatusEpic(int epicId) {
         int sumNEW = 0;
         int sumDONE = 0;
 
