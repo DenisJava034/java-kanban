@@ -2,7 +2,7 @@ package Manager;
 import Tasks.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.LinkedList;
 
 public class InMemoryTaskManager implements TaskManager {
     protected int id = 0;
@@ -175,7 +175,7 @@ public class InMemoryTaskManager implements TaskManager {
     }
 
     @Override
-    public List<Task> getHistory() {
+    public LinkedList<Task> getHistory() {
         return historyManager.getHistory();
     }
 
