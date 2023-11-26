@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class InMemoryHistoryManager implements HistoryManager {
-    HashMap<Integer, Node> mapNode = new HashMap<>();
+    private HashMap<Integer, Node> mapNode = new HashMap<>();
     private Node head;
     private Node tail;
 
@@ -72,7 +72,8 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public ArrayList<Task> getHistory() {
-        return getTask();
+        ArrayList<Task> copyHistory =  getTask();
+        return copyHistory;
     }
 
     @Override
