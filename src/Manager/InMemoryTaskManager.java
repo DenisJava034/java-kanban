@@ -1,8 +1,8 @@
 package Manager;
 import Tasks.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 
 public class InMemoryTaskManager implements TaskManager {
     protected int id = 0;
@@ -134,6 +134,7 @@ public class InMemoryTaskManager implements TaskManager {
             return;
         }
         tasks.remove(id);
+        historyManager.remove(id);
     }
 
     @Override
@@ -145,8 +146,10 @@ public class InMemoryTaskManager implements TaskManager {
         }
         for (int idSub : epics.get(id).getSubtaskId()) {
             subtasks.remove(idSub);
+            historyManager.remove(idSub);
         }
         epics.remove(id);
+        historyManager.remove(id);
     }
 
     @Override
@@ -160,6 +163,7 @@ public class InMemoryTaskManager implements TaskManager {
         int idSub = epics.get(subtasks.get(id).getEpicId()).getSubtaskId().indexOf(id);
         epics.get(subtasks.get(id).getEpicId()).getSubtaskId().remove(idSub);
         subtasks.remove(id);
+        historyManager.remove(id);
 
         updateStatusEpic(epicId);
     }
@@ -175,7 +179,7 @@ public class InMemoryTaskManager implements TaskManager {
     }
 
     @Override
-    public LinkedList<Task> getHistory() {
+    public ArrayList<Task> getHistory() {
         return historyManager.getHistory();
     }
 
@@ -202,6 +206,4 @@ public class InMemoryTaskManager implements TaskManager {
             epics.get(epicId).setStatus(TaskStatus.NEW);
         }
     }
-
-
 }
