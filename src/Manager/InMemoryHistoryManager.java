@@ -8,7 +8,7 @@ public class InMemoryHistoryManager implements HistoryManager {
     private Node head;
     private Node tail;
 
-    public void LinkLast (Task task) {
+    private void LinkLast (Task task) {
         Node newNode = new Node(task, tail, null);
         removeNode(task.getId());
         if (mapNode.isEmpty()){
@@ -19,25 +19,17 @@ public class InMemoryHistoryManager implements HistoryManager {
             mapNode.put(task.getId(), newNode);
             tail = newNode;
             mapNode.get(task.getId()).prev.next = newNode;
-            if (head.next == null){
-                head.next = newNode;
-            }
         }
     }
 
-    public ArrayList<Task> getTask() {
+    private ArrayList<Task> getTask() {
         ArrayList<Task> taskList = new ArrayList<>();
-        boolean isNode = !mapNode.isEmpty();
-        Node hubNode = null;
-        while (isNode){
+        Node hubNode = head;
+        while (hubNode != null) {
             if (taskList.isEmpty()) {
-                taskList.add(head.task);
-                hubNode = head.next;
+                taskList.add(hubNode.task);
+                hubNode = hubNode.next;
             }else {
-                if (hubNode.next == null) {
-                    taskList.add(hubNode.task);
-                    break;
-                }
                 taskList.add(hubNode.task);
                 hubNode = hubNode.next;
             }
@@ -45,7 +37,7 @@ public class InMemoryHistoryManager implements HistoryManager {
         return taskList;
     }
 
-    public void removeNode(int id) {
+    private void removeNode(int id) {
 
         Node node = mapNode.remove(id);
         if (node == null) {
