@@ -53,11 +53,9 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Tasks.Task{" +
-                "id=" + id +
-                ", nameTask='" + name + '\'' +
-                ", taskDescription='" + taskDescription + '\'' +
-                ", status='" + status + '\'' +
-                '}';
+        return String.format("%s,%s,%s,%s,%s%n", getId(),TypeTasks.TASK, getName(), getStatus(), getTaskDescription());
+    }
+
+    public enum TapeTasks {
     }
 }
