@@ -1,9 +1,9 @@
-package Manager;
+package manager;
 
-import Tasks.Epic;
-import Tasks.Subtask;
-import Tasks.Task;
-import Tasks.TaskStatus;
+import tasks.Epic;
+import tasks.Subtask;
+import tasks.Task;
+import tasks.TaskStatus;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         this.file = file;
     }
 
-        public static FileBackedTasksManager loadFromFile(File file) {
+    private static FileBackedTasksManager loadFromFile(File file) {
         int stringDelete = 3;
         boolean isHistory = true;
         FileBackedTasksManager fileBackedTasksManager = new FileBackedTasksManager(file);
@@ -79,23 +79,20 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         return fileBackedTasksManager;
     }
 
-    public static Task fromString(String value) {
+    private static Task fromString(String value) {
         String[] str = value.split(",");
 
         if (str[1].equals("TASK")) {
-            Task task = new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]));
-            return task;
-        } else if (str[1].equals("EPIC")) {
-            Epic epic = new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]));
-            return epic;
-        } else {
-            Subtask subtask = new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
-                    Integer.parseInt(str[5]));
-            return subtask;
+            return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]));
         }
+        if (str[1].equals("EPIC")) {
+            return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]));
+        }
+        return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                Integer.parseInt(str[5]));
     }
 
-    public void save() {
+    private void save() {
         recordHeader(file);
 
         try (Writer fileWriter = new FileWriter(file, true)) {
@@ -145,7 +142,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         return idInt;
     }
 
-    static String historyToString(HistoryManager manager) {
+    private static String historyToString(HistoryManager manager) {
         StringBuilder builder = new StringBuilder();
 
         for (Task task : manager.getHistory()) {

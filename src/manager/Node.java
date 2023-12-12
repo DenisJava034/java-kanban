@@ -1,5 +1,5 @@
-package Manager;
-import Tasks.Task;
+package manager;
+import tasks.Task;
 
 public class Node {
     protected Task task;
