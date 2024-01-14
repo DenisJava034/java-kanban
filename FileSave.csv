@@ -1,1 +1,2 @@
-id,type,name,status,description,epic
+id,type,name,status,description,epic,start,duration
+1,EPIC,Большая задача 1,NEW,Сделать то-то,null,0

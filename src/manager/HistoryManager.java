@@ -11,4 +11,7 @@ public interface HistoryManager {
     void addTaskOfListHistory(Task task);
 
     void remove(int id);
+
+
+
 }

@@ -6,6 +6,7 @@ import tasks.Task;
 import tasks.TaskStatus;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         this.file = file;
     }
 
-    private static FileBackedTasksManager loadFromFile(File file) {
+    public static FileBackedTasksManager loadFromFile(File file) {
         int stringDelete = 3;
         boolean isHistory = true;
         FileBackedTasksManager fileBackedTasksManager = new FileBackedTasksManager(file);
@@ -51,6 +52,9 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
 
             if (newTask instanceof Epic) {
                 fileBackedTasksManager.epics.put(newTask.getId(), (Epic) newTask);
+                fileBackedTasksManager.startTimeEndTimeEpic(((Epic) newTask).getId());
+                fileBackedTasksManager.startTimeSet.add((Epic) newTask);
+
 
             } else if (newTask instanceof Subtask) {
                 fileBackedTasksManager.subtasks.put(newTask.getId(), (Subtask) newTask);
@@ -59,8 +63,15 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 num.add(newTask.getId());
                 fileBackedTasksManager.epics.get(((Subtask) newTask).getEpicId()).setSubtaskId(num);
 
+                fileBackedTasksManager.startTimeSet.add((Subtask) newTask);
+
+                fileBackedTasksManager.startTimeSet.remove(fileBackedTasksManager.epics.get(((Subtask) newTask).getEpicId()));
+                fileBackedTasksManager.startTimeEndTimeEpic(((Subtask) newTask).getEpicId());
+                fileBackedTasksManager.startTimeSet.add(fileBackedTasksManager.epics.get(((Subtask) newTask).getEpicId()));
+
             } else {
                 fileBackedTasksManager.tasks.put(newTask.getId(), newTask);
+                fileBackedTasksManager.startTimeSet.add(newTask);
             }
         }
         if (isHistory) {
@@ -76,6 +87,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 }
             }
         }
+
         return fileBackedTasksManager;
     }
 
@@ -83,13 +95,22 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         String[] str = value.split(",");
 
         if (str[1].equals("TASK")) {
-            return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]));
+            return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                    LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
         }
         if (str[1].equals("EPIC")) {
-            return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]));
+            if (str[5].equals("null")){
+                LocalDateTime startTime = null;
+                return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                        startTime, Integer.parseInt(str[6]));
+            }else {
+                return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                        LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
+            }
+
         }
         return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
-                Integer.parseInt(str[5]));
+                Integer.parseInt(str[5]), LocalDateTime.parse(str[6]), Integer.parseInt(str[7]));
     }
 
     private void save() {
@@ -121,7 +142,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
 
     private void recordHeader(File file) {
         try (Writer fileClean = new FileWriter(file, false)) {
-            fileClean.write("id,type,name,status,description,epic\n");
+            fileClean.write("id,type,name,status,description,epic,start,duration\n");
 
         } catch (IOException e) {
             throw new ManagerSaveException("Ошибка " + e.getMessage());
