@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager> {
 
-    @Override
+        @Override
     public FileBackedTasksManager createManager() {
         File file = new File("FileSaveTest.csv");
         FileBackedTasksManager fileBackedTasksManager = new FileBackedTasksManager(file);
@@ -35,10 +35,11 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         FileBackedTasksManager manager = loadFromFile(files);
         assertEquals(0, files.length(), "Файл не пустой");
 
+        LocalDateTime localDateTime = null;
         Task task1 = new Task("Test addNewTask1", "Test addNewTask description1", TaskStatus.NEW,
                 LocalDateTime.of(2024, 1, 1, 10, 33, 0), 20);
         Task task2 = new Task("Test addNewTask2", "Test addNewTask description2", TaskStatus.NEW,
-                LocalDateTime.of(2024, 2, 5, 18, 11, 16), 30);
+                localDateTime, 0);
 
         manager.createTask(task1);
         manager.createTask(task2);
@@ -50,11 +51,9 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
 
         ArrayList <Task> checkTaskList = managerNew.getListOfTasks();
 
-
         assertEquals(2, checkTaskList.size(), "Количество задач не равно 2");
         // Пустой список истории
         assertEquals(0, managerNew.getHistory().size(), "История не пустая");
-
     }
 
     @Test
@@ -65,11 +64,11 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         FileBackedTasksManager manager = loadFromFile(files);
         assertEquals(0, files.length(), "Файл не пустой");
 
+        LocalDateTime localDateTime = null;
         Epic epic1 = new Epic("Test addNewEpic1", "Test addNewEpic description1", TaskStatus.NEW);
 
         Subtask subtask = new Subtask("Test addNewSubtask", "Test addNewSubtask description",
-                TaskStatus.NEW, 1, LocalDateTime.of(
-                2024, 1, 1, 10, 33, 0), 20);
+                TaskStatus.NEW, 1, localDateTime, 0);
         Subtask subtask2 = new Subtask("Test addNewSubtask2", "Test addNewSubtask description2",
                 TaskStatus.NEW, 1, LocalDateTime.of(
                 2024, 2, 5, 18, 11, 16), 30);
@@ -94,7 +93,7 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
     }
 
     @Test
-    void restoringEpicЦithoutSubtasksАromFile() throws IOException {
+    void restoringEpicWithoutSubtasksFromFile() throws IOException {
         File files = new File("FileSaveTest.csv");
         Writer fileClean = new FileWriter(files, false);
         fileClean.write("");
@@ -115,7 +114,6 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
 
         // Пустой список истории
         assertEquals(0, managerNew.getHistory().size(), "История не пустая");
-
     }
 
     @Test

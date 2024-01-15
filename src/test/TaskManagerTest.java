@@ -27,10 +27,11 @@ public abstract T createManager();
 
     @Test
     void getListOfTasks() throws IOException {
+        LocalDateTime localDateTime = null;
         Task task1 = new Task("Test addNewTask1", "Test addNewTask description1", TaskStatus.NEW,
-                LocalDateTime.of(2024, 1, 1, 10, 33, 0), 20);
+                localDateTime, 0);
         Task task2 = new Task("Test addNewTask2", "Test addNewTask description2", TaskStatus.NEW,
-                LocalDateTime.of(2024, 2, 5, 18, 11, 16), 30);
+                LocalDateTime.of(2024, 2, 5, 18, 11, 16), 5);
 
         taskManager.createTask(task1);
         taskManager.createTask(task2);
@@ -63,14 +64,14 @@ public abstract T createManager();
 
     @Test
     void getListOfSubTasks() throws IOException {
+        LocalDateTime localDateTime = null;
         Epic epic1 = new Epic("Test addNewEpic1", "Test addNewEpic description1", TaskStatus.NEW);
 
         Subtask subtask = new Subtask("Test addNewSubtask", "Test addNewSubtask description",
                 TaskStatus.NEW, 1, LocalDateTime.of(
                         2024, 1, 1, 10, 33, 0), 20);
         Subtask subtask2 = new Subtask("Test addNewSubtask2", "Test addNewSubtask description2",
-                TaskStatus.NEW, 1, LocalDateTime.of(
-                        2024, 2, 5, 18, 11, 16), 30);
+                TaskStatus.NEW, 1, localDateTime, 0);
 
         taskManager.createEpic(epic1);
         taskManager.createSubtask(subtask);
@@ -212,6 +213,7 @@ public abstract T createManager();
         assertEquals(subtask, taskManager.getSubtaskById(2), "Subtask не совпадает");
         assertNull(taskManager.getSubtaskById(-1), "Введен правильный id Subtask"); // проверка на не верный id.
     }
+
     @Test
     void createTask() throws IOException {
         Task task1 = new Task("Test addNewTask1", "Test addNewTask description1", TaskStatus.NEW,
@@ -229,7 +231,6 @@ public abstract T createManager();
         assertNotNull(tasks, "Задачи нe возвращаются.");
         assertEquals(1, tasks.size(), "Неверное количество задач.");
         assertEquals(task1, tasks.get(0), "Задачи не совпадают.");
-
     }
 
     @Test
@@ -276,7 +277,6 @@ public abstract T createManager();
         assertTrue(taskManager.getListSubtaskByEpicId(1).contains(subtask), "У Эпика нет такой подзадачи");
         assertEquals(savedSubtask.getStatus(), epic1.getStatus(), "Статус Эпика изменился");
         assertEquals(savedSubtask.getEpicId(), epic1.getId(), "Сабтаск хранит указание на другой Эпик");
-
     }
 
     @Test
@@ -304,7 +304,7 @@ public abstract T createManager();
 
         // Проверка на пересечение задач при обновлении
 
-        Task task4= new Task("Задача 2", "описание", TaskStatus.IN_PROGRESS,
+        Task task4= new Task("Задача 2", "Описание", TaskStatus.IN_PROGRESS, // добавляем еще одну задачу
                 LocalDateTime.of(2024, 1, 1, 10, 53, 1), 20);
         taskManager.createTask(task4);
 
@@ -315,6 +315,13 @@ public abstract T createManager();
         assertFalse(task5.equals(taskManager.getTaskById(1)), "Задача обновилась");
         assertFalse(taskManager.getListOfTasks().contains(task5), "Задача в списке обновилась");
 
+        // Проверка на обновление задачи при уменьшее времени старта
+        Task task6 = new Task(1,"Новое название", "Обновленное описание", TaskStatus.IN_PROGRESS,
+                LocalDateTime.of(2024, 1, 1, 8, 52, 1), 20);
+        taskManager.updateTask(task6);
+
+        assertTrue(task6.equals(taskManager.getTaskById(1)), "Задача не обновилась");
+        assertTrue(taskManager.getListOfTasks().contains(task6), "Задача в списке не обновилась");
 
     }
 
@@ -347,7 +354,6 @@ public abstract T createManager();
         assertFalse(epic4.equals(taskManager.getEpicById(1)), "Эпик обновился");
         assertFalse(taskManager.getListOfEpics().contains(epic4), "Эпик в списке обновился");
         assertFalse(taskManager.getPrioritizedTasks().contains(epic4), "Эпик добавился в список сортировки");
-
     }
 
     @Test
@@ -410,6 +416,15 @@ public abstract T createManager();
         assertFalse(subtask4.equals(taskManager.getSubtaskById(2)), "Сабтаск обновился");
         assertFalse(taskManager.getListOfSubTasks().contains(subtask4), "Сабтаск в списке обновился");
 
+
+        // Проверка на обновление задачи при уменьшее времени старта
+        Subtask subtask6 = new Subtask(2,"Test addNewSubtask", "Test addNewSubtask description",
+                TaskStatus.NEW, 1, LocalDateTime.of(
+                2024, 1, 1, 9, 33, 0), 20);
+        taskManager.updateSubtask(subtask6);
+
+        assertTrue(subtask6.equals(taskManager.getSubtaskById(2)), "Задача не обновилась");
+        assertTrue(taskManager.getListOfSubTasks().contains(subtask6), "Задача в списке не обновилась");
     }
 
     @Test
@@ -449,10 +464,9 @@ public abstract T createManager();
         taskManager.getEpicById(1);
         taskManager.getSubtaskById(2);
 
-        // Проверка что история не пуста и в списоке сортировки есть Epic и Subtask
+        // Проверка что история не пуста и в списоке сортировки есть Subtask
         assertEquals(2, taskManager.getHistory().size(), "Не верный размер истории");
         assertTrue(taskManager.getHistory().contains(epic1), "Эпик не записался в историю");
-        assertTrue(taskManager.getPrioritizedTasks().contains(epic1), "Эпик не попал в список сортировки");
 
         assertTrue(taskManager.getHistory().contains(subtask), "Сабтаск не записался в историю");
         assertTrue(taskManager.getPrioritizedTasks().contains(subtask), "Сабтаск не попал в список сортировки");
@@ -483,11 +497,10 @@ public abstract T createManager();
             taskManager.getEpicById(1);
             taskManager.getSubtaskById(2);
 
-        // Проверка что история не пуста и в списоке сортировки есть Epic и Subtask, статус эпика IN_PROGRESS,
+        // Проверка что история не пуста и в списоке сортировки есть Subtask, статус эпика IN_PROGRESS,
         // дата начала и продолжительность задачи равна Сабтаску
         assertEquals(2, taskManager.getHistory().size(), "Не верный размер истории");
         assertTrue(taskManager.getHistory().contains(epic1), "Эпик не записался в историю");
-        assertTrue(taskManager.getPrioritizedTasks().contains(epic1), "Эпик не попал в список сортировки");
 
         assertTrue(taskManager.getHistory().contains(subtask), "Сабтаск не записался в историю");
         assertTrue(taskManager.getPrioritizedTasks().contains(subtask), "Сабтаск не попал в список сортировки");
@@ -499,12 +512,10 @@ public abstract T createManager();
                 "Продолжительность Эпика не равно продолжительности Сабтска");
 
         // Проверка что после удаления в истории, в списке Сабтасков и в списке сортировки нет Сабтаска, статус эпика NEW,
-        // дата начала и продолжительность задачи равна Эпика равна null и 0, У эпика удалился id абтаска.
+        // дата начала и продолжительность задачи Эпика равна null и 0, У эпика удалился id абтаска.
         taskManager.deleteSubtaskById(2);
 
         assertEquals(1, taskManager.getHistory().size(), "Не верный размер истории");
-        assertTrue(taskManager.getHistory().contains(epic1), "Эпик удалился из истории");
-        assertTrue(taskManager.getPrioritizedTasks().contains(epic1), "Эпик удалился из списока сортировки");
 
         assertFalse(taskManager.getHistory().contains(subtask), "Сабтаск не удалился из истории");
         assertFalse(taskManager.getPrioritizedTasks().contains(subtask),
@@ -614,16 +625,11 @@ public abstract T createManager();
         TreeSet startTimeSet = taskManager.getPrioritizedTasks();
 
         ArrayList <Task> prioritizedList = new ArrayList<>(); // добавляем в список задачи согласно сортировки
-        prioritizedList.add(epic1);
         prioritizedList.add(subtask);
         prioritizedList.add(task1);
         prioritizedList.add(subtask2);
-        prioritizedList.add(epic2);
 
         assertEquals(startTimeSet.size(),prioritizedList.size(), "Размеры списков не равны");
         assertTrue(prioritizedList.containsAll(startTimeSet), "Задачи не совпадают");
     }
-
-
-
 }

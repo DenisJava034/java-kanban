@@ -52,8 +52,6 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
 
             if (newTask instanceof Epic) {
                 fileBackedTasksManager.epics.put(newTask.getId(), (Epic) newTask);
-                fileBackedTasksManager.startTimeEndTimeEpic(((Epic) newTask).getId());
-                fileBackedTasksManager.startTimeSet.add((Epic) newTask);
 
 
             } else if (newTask instanceof Subtask) {
@@ -64,10 +62,8 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 fileBackedTasksManager.epics.get(((Subtask) newTask).getEpicId()).setSubtaskId(num);
 
                 fileBackedTasksManager.startTimeSet.add((Subtask) newTask);
-
-                fileBackedTasksManager.startTimeSet.remove(fileBackedTasksManager.epics.get(((Subtask) newTask).getEpicId()));
                 fileBackedTasksManager.startTimeEndTimeEpic(((Subtask) newTask).getEpicId());
-                fileBackedTasksManager.startTimeSet.add(fileBackedTasksManager.epics.get(((Subtask) newTask).getEpicId()));
+
 
             } else {
                 fileBackedTasksManager.tasks.put(newTask.getId(), newTask);
@@ -95,8 +91,15 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         String[] str = value.split(",");
 
         if (str[1].equals("TASK")) {
-            return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
-                    LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
+            if (str[5].equals("null")){
+                LocalDateTime startTime = null;
+                return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                        startTime, Integer.parseInt(str[6]));
+            }else {
+                return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                        LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
+            }
+
         }
         if (str[1].equals("EPIC")) {
             if (str[5].equals("null")){
@@ -109,8 +112,13 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
             }
 
         }
-        return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
-                Integer.parseInt(str[5]), LocalDateTime.parse(str[6]), Integer.parseInt(str[7]));
+        if (str[6].equals("null")){
+            LocalDateTime startTime = null;
+            return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                    Integer.parseInt(str[5]), startTime, Integer.parseInt(str[7]));
+        }
+            return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                    Integer.parseInt(str[5]), LocalDateTime.parse(str[6]), Integer.parseInt(str[7]));
     }
 
     private void save() {

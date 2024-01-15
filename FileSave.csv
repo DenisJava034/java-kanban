@@ -1,2 +1,5 @@
 id,type,name,status,description,epic,start,duration
-1,EPIC,Большая задача 1,NEW,Сделать то-то,null,0
+1,TASK,Изменение 2,NEW,Test addNewTask description1,2024-01-01T10:32,20
+2,EPIC,Test addNewEpic1,NEW,Test addNewEpic description1,2024-01-11T10:53,50
+3,SUBTASK,Изменение,NEW,Test addNewSubtask description2,2,2024-01-11T10:53,20
+4,SUBTASK,Test addNewSubtask2,NEW,Test addNewSubtask description2,2,2024-02-05T18:11:16,30

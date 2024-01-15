@@ -91,14 +91,16 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s%n", getId(),TypeTasks.TASK, getName(), getStatus(), getTaskDescription(),
-                getStartTime(), getDuration());
+        return String.format("%s,%s,%s,%s,%s,%s,%s%n", getId(),TypeTasks.TASK, getName(), getStatus(),
+                getTaskDescription(), getStartTime(), getDuration());
     }
 
 
-    public LocalDateTime getEndTime(){
-        LocalDateTime andDateTime = startTime.plusMinutes(duration);
-
+    public LocalDateTime getEndTime() {
+        LocalDateTime andDateTime = null;
+        if(startTime != null){
+            andDateTime = startTime.plusMinutes(duration);
+        }
         return andDateTime;
     }
 }

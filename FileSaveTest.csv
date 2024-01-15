@@ -1,2 +1,7 @@
 id,type,name,status,description,epic,start,duration
-1,EPIC,Test addNewEpic1,NEW,Test addNewEpic description1,null,0
+4,TASK,Test addNewTask1,NEW,Test addNewTask description1,2024-06-01T10:33,20
+1,EPIC,Test addNewEpic1,NEW,Test addNewEpic description1,2024-01-01T10:33,50
+2,SUBTASK,Test addNewSubtask,NEW,Test addNewSubtask description,1,2024-01-01T10:33,20
+3,SUBTASK,Test addNewSubtask2,NEW,Test addNewSubtask description2,1,2024-02-05T18:11:16,30
+
+4,2,3,1,
