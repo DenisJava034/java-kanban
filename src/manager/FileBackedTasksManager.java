@@ -64,7 +64,6 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 fileBackedTasksManager.startTimeSet.add((Subtask) newTask);
                 fileBackedTasksManager.startTimeEndTimeEpic(((Subtask) newTask).getEpicId());
 
-
             } else {
                 fileBackedTasksManager.tasks.put(newTask.getId(), newTask);
                 fileBackedTasksManager.startTimeSet.add(newTask);
@@ -83,7 +82,6 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 }
             }
         }
-
         return fileBackedTasksManager;
     }
 
@@ -99,7 +97,6 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
             }
-
         }
         if (str[1].equals("EPIC")) {
             if (str[5].equals("null")){
@@ -110,7 +107,6 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
             }
-
         }
         if (str[6].equals("null")){
             LocalDateTime startTime = null;

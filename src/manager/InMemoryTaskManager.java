@@ -304,15 +304,13 @@ public class InMemoryTaskManager implements TaskManager {
                 if(subtasks.get(idSub).getStartTime() != null){
                     startTime = subtasks.get(idSub).getStartTime();
                 }
-                endTime = subtasks.get(idSub).getStartTime();
+                endTime = subtasks.get(idSub).getEndTime();
                 continue;
             }
             if(subtasks.get(idSub).getStartTime() != null){
                 if(subtasks.get(idSub).getStartTime().isBefore(startTime)){  //min time
                     startTime = subtasks.get(idSub).getStartTime();
                 }
-            }
-            if(subtasks.get(idSub).getStartTime() != null){
                 if(subtasks.get(idSub).getEndTime().isAfter(endTime)){       // max time
                     endTime = subtasks.get(idSub).getEndTime();
                 }
