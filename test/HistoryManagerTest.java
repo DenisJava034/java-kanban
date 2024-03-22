@@ -23,7 +23,6 @@ class HistoryManagerTest {
     @BeforeEach
     public void createManager() {
         File file = new File("FileSaveTest.csv");
-
         taskManager = new FileBackedTasksManager(file);
     }
 

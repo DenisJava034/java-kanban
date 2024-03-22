@@ -11,3 +11,9 @@ I
 	src/Fille,1\8\189b2fdffb76cdad0d222cea8b82a0b0640acfe6
 O
 src/servers/HttpTaskServer.java,4\a\4af13867bb71d8d8aec70ae1774ddca6c74511b2
+B
+test/EpicTest.java,7\7\77237342261e990f8e2477d1df65ad3909d6fefc
+L
+test/HttpTaskServerTest.java,e\a\ea7edc5bb434ae723268b48fb8e5e533bef1c306
+L
+test/HistoryManagerTest.java,b\5\b574116e60adb0c45f904287e4a42e3cd3238047
