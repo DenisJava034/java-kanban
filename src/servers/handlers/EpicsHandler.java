@@ -181,6 +181,5 @@ public class EpicsHandler implements HttpHandler {
         } finally {
             httpExchange.close();
         }
-
     }
 }
