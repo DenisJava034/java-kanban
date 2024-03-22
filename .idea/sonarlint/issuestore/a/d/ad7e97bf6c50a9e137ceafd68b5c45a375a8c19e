@@ -1,45 +1,45 @@
 
-K
-java:S3740ï"/Provide the parametrized type for this generic.(¶“³åûÿÿÿÿ
-
-java:S1192®"rDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ² ÑĞ¿Ğ¸ÑĞºĞµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(ÕÂ•°ùÿÿÿÿ
-x
-java:S1192"]Define a constant instead of duplicating this literal "Test addNewTask description1" 8 times.(‘Ô·óüÿÿÿÿ
-„
-java:S1192Ÿ"hDefine a constant instead of duplicating this literal "ĞĞ±Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ½Ğ¾Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ" 6 times.(å—Ãıÿÿÿÿ
-„
-java:S1192Ÿ"hDefine a constant instead of duplicating this literal "ĞĞ±Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ½Ğ¾Ğµ Ğ¾Ğ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğµ" 6 times.(å—Ãıÿÿÿÿ
+q
+java:S3740ï"/Provide the parametrized type for this generic.(¶“³åûÿÿÿÿJ$d4eb0150-3075-4828-8dca-4445dc358bc5
+´
+java:S1192®"rDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ² ÑĞ¿Ğ¸ÑĞºĞµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(ÕÂ•°ùÿÿÿÿJ$814053bb-c80d-4af5-b802-e640dbeba2b7
+
+java:S1192"]Define a constant instead of duplicating this literal "Test addNewTask description1" 8 times.(‘Ô·óüÿÿÿÿJ$c3d9fe89-ac21-4712-8b34-91f673f72477
+ª
+java:S1192Ÿ"hDefine a constant instead of duplicating this literal "ĞĞ±Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ½Ğ¾Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ" 6 times.(å—ÃıÿÿÿÿJ$b3090a86-2eca-4f20-bc4a-4d92798d02cf
+ª
+java:S1192Ÿ"hDefine a constant instead of duplicating this literal "ĞĞ±Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ½Ğ¾Ğµ Ğ¾Ğ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğµ" 6 times.(å—ÃıÿÿÿÿJ$b099c5b5-3aba-49aa-99d4-deb4c4d93611
+¹
+java:S1192¥"wDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ² ÑĞ¿Ğ¸ÑĞºĞµ Ğ½Ğµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(÷ÑÎıúÿÿÿÿJ$d030af06-3e11-41b1-949d-3a53842c1747
+Ÿ
+java:S11921"^Define a constant instead of duplicating this literal "Test addNewEpic description1" 18 times.(ùõœ×úÿÿÿÿJ$0b38c58c-971e-4c6b-82aa-7912a7271825
+œ
+java:S1192H"`Define a constant instead of duplicating this literal "Test addNewSubtask description2" 9 times.(¾›÷ÁJ$80b8a636-f6fb-49e5-9945-de85762798de
+«
+java:S1192µ"nDefine a constant instead of duplicating this literal "ĞĞµ Ğ²ĞµÑ€Ğ½Ñ‹Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€ Ğ¸ÑÑ‚Ğ¾Ñ€Ğ¸Ğ¸" 6 times.(¨£ËôJ$382b3729-8df8-4252-a2af-bc61ae9eecc6
+¡
+java:S1192Ô"eDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ¸ Ğ½Ğµ ÑĞ¾Ğ²Ğ¿Ğ¾Ğ´Ğ°ÑÑ‚" 4 times.(¨õ‘J$a62b1a4e-9e5b-4d44-9a38-952fd7d2fb85
+Ÿ
+java:S1192­"bDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(’ÓúüJ$26539f25-e7be-46c5-bf93-ace2eaed6af6
+£
+java:S1192â"fDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ¸ Ğ½Ğµ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‚." 4 times.(¹±ÑĞJ$5a37ef6a-995d-4df1-9e9f-b0367c30fa9e
+°
+java:S1192®"sDefine a constant instead of duplicating this literal "Ğ˜ÑÑ‚Ğ¾Ñ€Ğ¸Ñ Ğ¿ÑƒÑÑ‚Ğ° Ğ¸Ğ»Ğ¸ Ğ½Ğµ Ñ€Ğ°Ğ²Ğ½Ğ° 1" 3 times.(ôóÌšJ$265682d4-9843-4aca-b9b4-bba69097896f
+™
+java:S1192¶"\Define a constant instead of duplicating this literal "ĞĞ¾Ğ²Ğ¾Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ" 3 times.(š»É«J$c90e6a20-4d99-480e-954c-05032ba9d671
+œ
+java:S1192b"`Define a constant instead of duplicating this literal "Ğ˜ÑÑ‚Ğ¾Ñ€Ğ¸Ñ Ğ½Ğµ Ğ¿ÑƒÑÑ‚Ğ°" 10 times.(Ñ¸‚ˆJ$ed17cce5-8f2e-4d0a-806a-a5fd9e6bfbac
+’
+java:S1192"QDefine a constant instead of duplicating this literal "Test addNewTask1" 8 times.(‘Ô·óüÿÿÿÿJ$f6decbfa-6c62-462d-a7fc-3faad464506c
+©
+java:S1192¤"gDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ½Ğµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(ÙÒ³ÀÿÿÿÿÿJ$4194dad3-96a6-492a-8fe7-bee78266a69f
+¡
+java:S1192E"`Define a constant instead of duplicating this literal "Test addNewSubtask description" 13 times.(ŒÆóıÿÿÿÿJ$f31e9f24-7109-4e34-a605-efc261976a05
 “
-java:S1192¥"wDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ² ÑĞ¿Ğ¸ÑĞºĞµ Ğ½Ğµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(÷ÑÎıúÿÿÿÿ
-y
-java:S11921"^Define a constant instead of duplicating this literal "Test addNewEpic description1" 18 times.(ùõœ×úÿÿÿÿ
-v
-java:S1192H"`Define a constant instead of duplicating this literal "Test addNewSubtask description2" 9 times.(¾›÷Á
-…
-java:S1192µ"nDefine a constant instead of duplicating this literal "ĞĞµ Ğ²ĞµÑ€Ğ½Ñ‹Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€ Ğ¸ÑÑ‚Ğ¾Ñ€Ğ¸Ğ¸" 6 times.(¨£Ëô
-{
-java:S1192Ô"eDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ¸ Ğ½Ğµ ÑĞ¾Ğ²Ğ¿Ğ¾Ğ´Ğ°ÑÑ‚" 4 times.(¨õ‘
-y
-java:S1192­"bDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(’Óúü
-}
-java:S1192â"fDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ¸ Ğ½Ğµ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‚." 4 times.(¹±ÑĞ
-Š
-java:S1192®"sDefine a constant instead of duplicating this literal "Ğ˜ÑÑ‚Ğ¾Ñ€Ğ¸Ñ Ğ¿ÑƒÑÑ‚Ğ° Ğ¸Ğ»Ğ¸ Ğ½Ğµ Ñ€Ğ°Ğ²Ğ½Ğ° 1" 3 times.(ôóÌš
-s
-java:S1192¶"\Define a constant instead of duplicating this literal "ĞĞ¾Ğ²Ğ¾Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ" 3 times.(š»É«
-v
-java:S1192b"`Define a constant instead of duplicating this literal "Ğ˜ÑÑ‚Ğ¾Ñ€Ğ¸Ñ Ğ½Ğµ Ğ¿ÑƒÑÑ‚Ğ°" 10 times.(Ñ¸‚ˆ
-l
-java:S1192"QDefine a constant instead of duplicating this literal "Test addNewTask1" 8 times.(‘Ô·óüÿÿÿÿ
-ƒ
-java:S1192¤"gDefine a constant instead of duplicating this literal "Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ½Ğµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»Ğ°ÑÑŒ" 3 times.(ÙÒ³Àÿÿÿÿÿ
-{
-java:S1192E"`Define a constant instead of duplicating this literal "Test addNewSubtask description" 13 times.(ŒÆóıÿÿÿÿ
-m
-java:S11921"RDefine a constant instead of duplicating this literal "Test addNewEpic1" 18 times.(ùõœ×úÿÿÿÿ
-Œ
-java:S1192ı"pDefine a constant instead of duplicating this literal "Ğ¡Ñ‚Ğ°Ñ‚ÑƒÑ ÑĞ¿Ğ¸ĞºĞ° Ğ½Ğµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»ÑÑ" 5 times.(ÖØŠŞşÿÿÿÿ
-o
-java:S1192E"TDefine a constant instead of duplicating this literal "Test addNewSubtask" 13 times.(ŒÆóıÿÿÿÿ
-j
-java:S1192H"TDefine a constant instead of duplicating this literal "Test addNewSubtask2" 7 times.(¾›÷Á
+java:S11921"RDefine a constant instead of duplicating this literal "Test addNewEpic1" 18 times.(ùõœ×úÿÿÿÿJ$00b01cc2-fcfe-48c8-a5d8-d7bb6a36f1ca
+²
+java:S1192ı"pDefine a constant instead of duplicating this literal "Ğ¡Ñ‚Ğ°Ñ‚ÑƒÑ ÑĞ¿Ğ¸ĞºĞ° Ğ½Ğµ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ¸Ğ»ÑÑ" 5 times.(ÖØŠŞşÿÿÿÿJ$48a14687-630a-4a7e-b75b-08abbd37783c
+•
+java:S1192E"TDefine a constant instead of duplicating this literal "Test addNewSubtask" 13 times.(ŒÆóıÿÿÿÿJ$0b7fc741-d9a3-44ad-84c3-b66023b97414
+
+java:S1192H"TDefine a constant instead of duplicating this literal "Test addNewSubtask2" 7 times.(¾›÷ÁJ$48a08e9e-e005-4e67-bd79-f293395b43a3

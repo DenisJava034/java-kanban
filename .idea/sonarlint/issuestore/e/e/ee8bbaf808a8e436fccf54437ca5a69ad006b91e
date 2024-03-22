@@ -1,77 +1,77 @@
 
-~
-java:S1192„"hDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 406" 4 times.(èÂÀ)
+¤
+java:S1192ƒ"hDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 406" 4 times.(èÂÀ)J$89f59d42-6ad2-4c50-8fa8-c4698789670b
+ª
+java:S1192g"iDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 404" 22 times.(Šª†«şÿÿÿÿJ$ac076a19-17ae-4bca-b57f-fd7dce231250
+ª
+java:S1192æ"hDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 201" 6 times.(ª—ÛòÿÿÿÿÿJ$3086a54d-5720-48ed-ad5e-ae600a8dc506
+™
+java:S1192,"]Define a constant instead of duplicating this literal "Test addNewTask description1" 3 times.(ÜôŞïJ$5dee088a-961e-4863-9d20-a33b94d436cd
+Ÿ
+java:S1192Ò"]Define a constant instead of duplicating this literal "Test addNewTask description2" 4 times.(‘ÿ¦ØùÿÿÿÿJ$2ebe65e3-39c4-4e4d-ae0f-0458d79dcc75
+ª
+java:S1192R"iDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 200" 15 times.(Ñ˜Ñ·ûÿÿÿÿJ$48bdc742-bf13-4180-8705-34bfe6896333
+
+java:S1192m"\Define a constant instead of duplicating this literal "http://localhost:8080/epics" 3 times.(Ó…ÿÇıÿÿÿÿJ$215b07b1-786a-4326-814f-28bb32428f43
+¹
+java:S1192ı"wDefine a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° Ğ·Ğ°Ğ´Ğ°Ñ‡ Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 1" 6 times.(å×ÄìÿÿÿÿÿJ$ca61b6d2-a283-4c90-bc71-3b3cd25d4c5c
+¹
+java:S1192™"wDefine a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° Ğ·Ğ°Ğ´Ğ°Ñ‡ Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 2" 3 times.(ğ†°½ıÿÿÿÿJ$487e64d2-c27f-494a-bd4b-3aa5ca9bfcf5
+š
+java:S1192µ"]Define a constant instead of duplicating this literal "Test addNewEpic description2" 4 times.(Ë¥ÉşJ$5f7d13ef-0ed0-4018-961d-6021527758d6
+
+java:S1192M"RDefine a constant instead of duplicating this literal "application/json" 47 times.(ˆ±¶èJ$dc1da7c2-e5af-451d-b713-d5eb7da7bec7
 „
-java:S1192g"iDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 404" 22 times.(Šª†«şÿÿÿÿ
-„
-java:S1192ç"hDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 201" 6 times.(ª—Ûòÿÿÿÿÿ
-s
-java:S1192,"]Define a constant instead of duplicating this literal "Test addNewTask description1" 3 times.(ÜôŞï
-y
-java:S1192Ó"]Define a constant instead of duplicating this literal "Test addNewTask description2" 4 times.(‘ÿ¦Øùÿÿÿÿ
-„
-java:S1192R"iDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ´ Ğ¾Ñ‚Ğ²ĞµÑ‚Ğ° Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 200" 15 times.(Ñ˜Ñ·ûÿÿÿÿ
-w
-java:S1192m"\Define a constant instead of duplicating this literal "http://localhost:8080/epics" 3 times.(Ó…ÿÇıÿÿÿÿ
-“
-java:S1192ş"wDefine a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° Ğ·Ğ°Ğ´Ğ°Ñ‡ Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 1" 6 times.(å×Äìÿÿÿÿÿ
-“
-java:S1192š"wDefine a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° Ğ·Ğ°Ğ´Ğ°Ñ‡ Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 2" 3 times.(ğ†°½ıÿÿÿÿ
-t
-java:S1192¶"]Define a constant instead of duplicating this literal "Test addNewEpic description2" 4 times.(Ë¥Éş
-h
-java:S1192M"RDefine a constant instead of duplicating this literal "application/json" 47 times.(ˆ±¶è
-^
-java:S1192M"HDefine a constant instead of duplicating this literal "Accept" 47 times.(ˆ±¶è
-€
-java:S1192}"eDefine a constant instead of duplicating this literal "taskDescription Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°tÑ‚" 6 times.(Ë÷âøşÿÿÿÿ
-}
-java:S1192ì"aDefine a constant instead of duplicating this literal "http://localhost:8080/tasks?id=1" 3 times.(¯Š‚ûÿÿÿÿ
-r
-java:S1192À"[Define a constant instead of duplicating this literal "name Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚" 5 times.(¨ÅÓ³
-q
-java:S1192X"[Define a constant instead of duplicating this literal "name Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ÑÑ‚" 5 times.(ÊÜ‡À
-€
-java:S1192°"dDefine a constant instead of duplicating this literal "http://localhost:8080/subtasks?id=4" 3 times.(ö€°Ûùÿÿÿÿ
-p
-java:S1192¿"YDefine a constant instead of duplicating this literal "id Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚" 3 times.(€Ìï
-‚
-java:S1192Á"fDefine a constant instead of duplicating this literal "taskDescription Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚" 5 times.(Î«Ëüÿÿÿÿ
-u
-java:S1192]"_Define a constant instead of duplicating this literal "duration Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°eÑ‚" 11 times.(ı™Ã‘
-•
-java:S1192Ÿ"yDefine a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° ÑĞ¿Ğ¸ĞºĞ¾Ğ² Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 1" 4 times.(ÄÄ­¸ıÿÿÿÿ
-h
-java:S1192¶"QDefine a constant instead of duplicating this literal "Test addNewEpic2" 4 times.(Ë¥Éş
-v
-java:S1192"_Define a constant instead of duplicating this literal "http://localhost:8080/subtasks" 4 times.(Ó¶†î
-g
-java:S1192,"QDefine a constant instead of duplicating this literal "Test addNewTask1" 3 times.(ÜôŞï
-x
-java:S1192["]Define a constant instead of duplicating this literal "status Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°eÑ‚" 12 times.(í¦•‰şÿÿÿÿ
-{
-java:S1192\"`Define a constant instead of duplicating this literal "StartTime Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°eÑ‚" 11 times.(±¡ÛÔşÿÿÿÿ
-h
-java:S1192Ò"QDefine a constant instead of duplicating this literal "Test addNewTask2" 4 times.(Ç©‚
-r
-java:S1192J"\Define a constant instead of duplicating this literal "http://localhost:8080/tasks" 4 times.(ëˆ—Ş
+java:S1192M"HDefine a constant instead of duplicating this literal "Accept" 47 times.(ˆ±¶èJ$af06b0ea-d15c-47ae-a870-b6cde52e412e
+¦
+java:S1192}"eDefine a constant instead of duplicating this literal "taskDescription Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°tÑ‚" 6 times.(Ë÷âøşÿÿÿÿJ$14a4a20b-5d32-4efc-8511-d42aebd29f6c
+£
+java:S1192ë"aDefine a constant instead of duplicating this literal "http://localhost:8080/tasks?id=1" 3 times.(¯Š‚ûÿÿÿÿJ$1869efc0-95d9-4270-b5c0-f5e8f7d6fa17
+˜
+java:S1192À"[Define a constant instead of duplicating this literal "name Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚" 5 times.(¨ÅÓ³J$1b2ebef3-84fd-4ef0-b622-d38bd45c4c60
+—
+java:S1192X"[Define a constant instead of duplicating this literal "name Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ÑÑ‚" 5 times.(ÊÜ‡ÀJ$36697a05-a9f0-462c-85f3-6f30d69e54b1
+¦
+java:S1192¯"dDefine a constant instead of duplicating this literal "http://localhost:8080/subtasks?id=4" 3 times.(ö€°ÛùÿÿÿÿJ$ccf34803-148e-482a-9731-98090ed92867
+–
+java:S1192¿"YDefine a constant instead of duplicating this literal "id Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚" 3 times.(€ÌïJ$263647d6-7641-401c-baff-555bcc40bac3
+¨
+java:S1192Á"fDefine a constant instead of duplicating this literal "taskDescription Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ĞµÑ‚" 5 times.(Î«ËüÿÿÿÿJ$381bcc42-cc2b-4888-9fea-9e91f1235405
 ›
-java:S1192Ö"Define a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° ÑĞ°Ğ±Ñ‚Ğ°ÑĞºĞ¾Ğ² Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 2" 7 times.(Ë¥ÚÖÿÿÿÿÿ
+java:S1192]"_Define a constant instead of duplicating this literal "duration Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°eÑ‚" 11 times.(ı™Ã‘J$fb150ecc-7ef1-4746-ae28-ece50c67e1cc
+»
+java:S1192"yDefine a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° ÑĞ¿Ğ¸ĞºĞ¾Ğ² Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 1" 4 times.(ÄÄ­¸ıÿÿÿÿJ$24192652-b24c-44f3-88f6-f58d1fea0b64
+
+java:S1192µ"QDefine a constant instead of duplicating this literal "Test addNewEpic2" 4 times.(Ë¥ÉşJ$fb062a6e-74f2-4058-92ae-6aa3beb76a4a
+œ
+java:S1192"_Define a constant instead of duplicating this literal "http://localhost:8080/subtasks" 4 times.(Ó¶†îJ$d55e42ab-ec91-4b30-bd12-232215c2d892
+
+java:S1192,"QDefine a constant instead of duplicating this literal "Test addNewTask1" 3 times.(ÜôŞïJ$35c27511-0e34-4a8d-8d0a-fa87aed27fba
+
+java:S1192["]Define a constant instead of duplicating this literal "status Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°eÑ‚" 12 times.(í¦•‰şÿÿÿÿJ$657f4e94-3e26-4f62-a155-7da8d18c7b9b
+¡
+java:S1192\"`Define a constant instead of duplicating this literal "StartTime Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°eÑ‚" 11 times.(±¡ÛÔşÿÿÿÿJ$b941e7dd-506b-4c05-9cc5-2978f707b721
+
+java:S1192Ñ"QDefine a constant instead of duplicating this literal "Test addNewTask2" 4 times.(Ç©‚J$bdca1d89-2c9f-46da-8aed-6f6c0bf1ff8e
+˜
+java:S1192J"\Define a constant instead of duplicating this literal "http://localhost:8080/tasks" 4 times.(ëˆ—ŞJ$8dd00eb0-a26f-4e86-aefe-dd33e5dd123b
+Á
+java:S1192Õ"Define a constant instead of duplicating this literal "Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑĞ¿Ğ¸ÑĞºĞ° ÑĞ°Ğ±Ñ‚Ğ°ÑĞºĞ¾Ğ² Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 2" 7 times.(Ë¥ÚÖÿÿÿÿÿJ$1b4d6c46-f4d5-44ca-9a12-37d56134c09d
+¤
+java:S1192ì"bDefine a constant instead of duplicating this literal "id Ğ·Ğ°Ğ´Ğ°Ñ‡Ğ¸ Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 1" 3 times.(È¾­¹şÿÿÿÿJ$4e461db4-8852-4428-ac74-f8edb6f464d1
+–
+java:S1192W"ZDefine a constant instead of duplicating this literal "id Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ÑÑ‚" 10 times.(³îÁÜJ$1b607295-757f-4360-9105-d52bfb4c6616
+‘
+java:S1192ª"TDefine a constant instead of duplicating this literal "Test addNewSubtask3" 4 times.(‘†óßJ$32b3382f-a9bb-4747-968a-ad1061bef8df
+¢
+java:S1104"ZMake httpTaskServer a static final constant or non-public and provide accessors if needed.(óªÊùşÿÿÿÿ8Ç³İ¾æ1J$f19c96bf-ad8f-4379-a01f-80f6cb9a5245
+w
+java:S2696>"6Make the enclosing method "static" or remove this set.(åĞ—‡úÿÿÿÿJ$0237efc5-bf55-4758-a05b-297580121bc3
+´
+java:S1130C"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(«ò™üÿÿÿÿ8¶´İ¾æ1J$721fcfe1-d0d4-4028-8297-13127caf0cba
+x
+java:S1117ş";Rename "subtask" which hides the field declared at line 36.(Èñ¿™J$63252b0e-c766-4c63-98c6-cd60bc42fa70
 ~
-java:S1192í"bDefine a constant instead of duplicating this literal "id Ğ·Ğ°Ğ´Ğ°Ñ‡Ğ¸ Ğ½Ğµ Ñ€Ğ°Ğ²ĞµĞ½ 1" 3 times.(È¾­¹şÿÿÿÿ
-p
-java:S1192W"ZDefine a constant instead of duplicating this literal "id Ğ½Ğµ ÑĞ¾Ğ¿Ğ°Ğ´Ğ°ÑÑ‚" 10 times.(³îÁÜ
-k
-java:S1192«"TDefine a constant instead of duplicating this literal "Test addNewSubtask3" 4 times.(‘†óß
-u
-java:S1104"ZMake httpTaskServer a static final constant or non-public and provide accessors if needed.(óªÊùşÿÿÿÿ
-Q
-java:S2696>"6Make the enclosing method "static" or remove this set.(åĞ—‡úÿÿÿÿ
-‡
-java:S1130C"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(«ò™üÿÿÿÿ
-R
-java:S1117ÿ";Rename "subtask" which hides the field declared at line 36.(Èñ¿™
-X
-java:S1117Å"<Rename "subtask2" which hides the field declared at line 37.(‹ùØŒşÿÿÿÿ
-X
-java:S1117Ò"<Rename "subtask2" which hides the field declared at line 37.(‹ùØŒşÿÿÿÿ
+java:S1117Ä"<Rename "subtask2" which hides the field declared at line 37.(‹ùØŒşÿÿÿÿJ$c39235e9-83a4-42fd-b617-8feef8ff2ad2
+~
+java:S1117Ñ"<Rename "subtask2" which hides the field declared at line 37.(‹ùØŒşÿÿÿÿJ$d0578a09-d981-400f-8772-261fb820397f

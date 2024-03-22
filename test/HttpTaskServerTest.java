@@ -206,7 +206,6 @@ public class HttpTaskServerTest {
         assertEquals(404, response1.statusCode(), "Код ответа не равен 404");
     }
 
-
     @Test
     public void getEpicById() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
