@@ -19,5 +19,3 @@ L
 test/HistoryManagerTest.java,b\5\b574116e60adb0c45f904287e4a42e3cd3238047
 T
 $test/FileBackedTasksManagerTest.java,f\9\f9b0cf3e66a6180b11fcd1b84c805c367abdaccb
-Q
-!test/InMemoryTaskManagerTest.java,f\5\f5a029b4aaf1fe7c0abe0d5a823fa4ab223ac09a

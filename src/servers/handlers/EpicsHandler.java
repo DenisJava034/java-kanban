@@ -63,7 +63,7 @@ public class EpicsHandler implements HttpHandler {
 
                             if (id != -1) {
 
-                                String response = gson.toJson(taskManager.getEpicById(id)); // проверка на наличие Эпика
+                                String response = gson.toJson(taskManager.getEpicById(id)); //проверка на наличие Эпика
                                 if (response.equals("null")) {
                                     httpExchange.sendResponseHeaders(404, 0);
                                     break;
