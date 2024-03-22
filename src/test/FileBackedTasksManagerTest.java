@@ -15,12 +15,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import static manager.FileBackedTasksManager.loadFromFile;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager> {
 
-        @Override
+    @Override
     public FileBackedTasksManager createManager() {
         File file = new File("FileSaveTest.csv");
         FileBackedTasksManager fileBackedTasksManager = new FileBackedTasksManager(file);
@@ -49,7 +49,7 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         //Считываем файл, проверяем все ли задачи считались
         FileBackedTasksManager managerNew = loadFromFile(files);
 
-        ArrayList <Task> checkTaskList = managerNew.getListOfTasks();
+        ArrayList<Task> checkTaskList = managerNew.getListOfTasks();
 
         assertEquals(2, checkTaskList.size(), "Количество задач не равно 2");
         // Пустой список истории
@@ -81,8 +81,8 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         //Считываем файл, проверяем все ли задачи считались
         FileBackedTasksManager managerNew = loadFromFile(files);
 
-        ArrayList <Epic> checkEpicList = managerNew.getListOfEpics();
-        ArrayList <Subtask> checkSubtaskList = managerNew.getListOfSubTasks();
+        ArrayList<Epic> checkEpicList = managerNew.getListOfEpics();
+        ArrayList<Subtask> checkSubtaskList = managerNew.getListOfSubTasks();
 
         assertEquals(1, checkEpicList.size(), "Количество Эпиков не равно 1");
         assertEquals(2, checkSubtaskList.size(), "Количество Сабтасков не равно 2");
@@ -108,7 +108,7 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         //Считываем файл, проверяем все ли задачи считались
         FileBackedTasksManager managerNew = loadFromFile(files);
 
-        ArrayList <Epic> checkEpicList = managerNew.getListOfEpics();
+        ArrayList<Epic> checkEpicList = managerNew.getListOfEpics();
 
         assertEquals(1, checkEpicList.size(), "Количество Эпиков не равно 1");
 
@@ -136,7 +136,6 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         Task task1 = new Task("Test addNewTask1", "Test addNewTask description1", TaskStatus.NEW,
                 LocalDateTime.of(2024, 6, 1, 10, 33, 0), 20);
 
-
         manager.createEpic(epic1);
         manager.createSubtask(subtask);
         manager.createSubtask(subtask2);
@@ -152,7 +151,7 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
         //Считываем файл, проверяем считалась ли история
         FileBackedTasksManager managerNew = loadFromFile(files);
 
-        ArrayList <Task> checkHistoryList = managerNew.getHistory();
+        ArrayList<Task> checkHistoryList = managerNew.getHistory();
 
         assertEquals(4, checkHistoryList.size(), "Размер истории не равно 4");
 
