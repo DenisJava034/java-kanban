@@ -368,7 +368,6 @@ public class HttpTaskServerTest {
                 .header("Accept", "application/json")
                 .GET()
                 .build();
-
         TreeSet<Task> prioritized = taskManager.getPrioritizedTasks();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());

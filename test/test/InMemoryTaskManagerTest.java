@@ -2,7 +2,7 @@ package test;
 
 import manager.InMemoryTaskManager;
 
-class InMemoryTaskManagerTest extends TaskManagerTest<InMemoryTaskManager> {
+class InMemoryTaskManagerTest extends test.TaskManagerTest<InMemoryTaskManager> {
 
     @Override
     public InMemoryTaskManager createManager() {

@@ -18,7 +18,7 @@ import static manager.FileBackedTasksManager.loadFromFile;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager> {
+class FileBackedTasksManagerTest extends test.TaskManagerTest<FileBackedTasksManager> {
 
     @Override
     public FileBackedTasksManager createManager() {
