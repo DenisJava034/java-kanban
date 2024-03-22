@@ -7,8 +7,8 @@ public class Task {
     protected String name;
     protected String taskDescription;
     protected TaskStatus status;
-    protected LocalDateTime  startTime;
-    protected int  duration;
+    protected LocalDateTime startTime;
+    protected int duration;
 
 
     public Task(int id, String name, String taskDescription, TaskStatus status, LocalDateTime startTime, int duration) {
@@ -91,14 +91,14 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s%n", getId(),TypeTasks.TASK, getName(), getStatus(),
+        return String.format("%s,%s,%s,%s,%s,%s,%s%n", getId(), TypeTasks.TASK, getName(), getStatus(),
                 getTaskDescription(), getStartTime(), getDuration());
     }
 
 
     public LocalDateTime getEndTime() {
         LocalDateTime andDateTime = null;
-        if(startTime != null){
+        if (startTime != null) {
             andDateTime = startTime.plusMinutes(duration);
         }
         return andDateTime;
