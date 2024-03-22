@@ -110,7 +110,7 @@ class HistoryManagerTest {
         historyCheck.add(epic1);
         historyCheck.add(subtask2);
 
-        assertEquals(historyListInManager.size(), historyCheck.size(), "Размеры списков истории  не равны");
+        assertEquals(historyListInManager.size(), historyCheck.size(), "Размеры списков истории не равны");
         assertTrue(historyListInManager.containsAll(historyCheck), "Списки не совпадают");
     }
 
