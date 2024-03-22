@@ -40,7 +40,7 @@ public class InMemoryTaskManager implements TaskManager {
     }
 
     @Override
-    public void deleteAllTasks() {
+    public Object deleteAllTasks() {
         for (Task task : tasks.values()){
             startTimeSet.remove(task);
             historyManager.remove(task.getId());
@@ -48,10 +48,11 @@ public class InMemoryTaskManager implements TaskManager {
 
         tasks.clear();
 
+        return null;
     }
 
     @Override
-    public void deleteAllEpic() {
+    public Object deleteAllEpic() {
         for (int idSub : epics.keySet()) {
             historyManager.remove(idSub);
         }
@@ -62,10 +63,11 @@ public class InMemoryTaskManager implements TaskManager {
         epics.clear();
         subtasks.clear();
 
+        return null;
     }
 
     @Override
-    public void deleteAllSubtask() {
+    public Object deleteAllSubtask() {
         for (Subtask subtask : subtasks.values()){
             startTimeSet.remove(subtask);
             historyManager.remove(subtask.getId());
@@ -76,6 +78,7 @@ public class InMemoryTaskManager implements TaskManager {
             startTimeEndTimeEpic(idEpic);
             updateStatusEpic(idEpic);
         }
+        return null;
     }
 
     @Override
@@ -163,15 +166,29 @@ public class InMemoryTaskManager implements TaskManager {
 
     @Override
     public void updateEpic(Epic epic) {
+        boolean isTrue = true;
         if (!epics.containsKey(epic.getId())) {
             System.out.println("Epic с id - " + epic.getId() + " не найдено");
             return;
         }
-        if(epics.get(epic.getId()).getStartTime() == epic.getStartTime() && // Проверка на то что не были изменены
-                epics.get(epic.getId()).getDuration() == epic.getDuration()){  // поля которые должны расчитываться
-                                                                               // автоматически исходя из подзадач.
-            epic.setSubtaskId(epics.get(epic.getId()).getSubtaskId());
-            epics.put(epic.getId(),epic);
+
+        if (epics.get(epic.getId()).getStartTime() == null && epic.getStartTime() != null){  // Проверяем LocalDateTime
+            isTrue = false;                                                                 // на null
+        }
+        if (epics.get(epic.getId()).getStartTime() == null && epic.getStartTime() == null){
+            isTrue = true;
+        }
+        if (epics.get(epic.getId()).getStartTime() != null && epic.getStartTime() != null){
+            if (epics.get(epic.getId()).getStartTime().equals(epic.getStartTime())){
+                isTrue = true;
+            }else {
+                isTrue = false;
+            }
+        }
+
+        if(isTrue && epics.get(epic.getId()).getDuration() == epic.getDuration()){// Проверка на то что не были изменены
+            epic.setSubtaskId(epics.get(epic.getId()).getSubtaskId());           // поля которые должны расчитываться
+            epics.put(epic.getId(),epic);                                       // автоматически исходя из подзадач.
 
             updateStatusEpic(epics.get(epic.getId()).getId());
 
@@ -207,23 +224,24 @@ public class InMemoryTaskManager implements TaskManager {
     }
 
     @Override
-    public void deleteTaskById(int id) {
+    public Object deleteTaskById(int id) {
 
         if (!tasks.containsKey(id)) {
             System.out.println("Tasks.Task с id - " + id + " не найдено");
-            return;
+            return null;
         }
         startTimeSet.remove(tasks.get(id));
         tasks.remove(id);
         historyManager.remove(id);
+        return null;
     }
 
     @Override
-    public void deleteEpicById(int id) {
+    public Object deleteEpicById(int id) {
 
         if (!epics.containsKey(id)) {
             System.out.println("Tasks.Epic с id - " + id + " не найдено");
-            return;
+            return null;
         }
         for (int idSub : epics.get(id).getSubtaskId()) {
             startTimeSet.remove(subtasks.get(idSub));
@@ -232,15 +250,16 @@ public class InMemoryTaskManager implements TaskManager {
         }
         epics.remove(id);
         historyManager.remove(id);
+        return null;
     }
 
     @Override
-    public void deleteSubtaskById(int id) {
+    public Object deleteSubtaskById(int id) {
         int epicId = subtasks.get(id).getEpicId();
 
         if (!subtasks.containsKey(id)) {
             System.out.println("Tasks.Subtask с id - " + id + " не найдено");
-            return;
+            return null;
         }
         int idSub = epics.get(subtasks.get(id).getEpicId()).getSubtaskId().indexOf(id);
         epics.get(subtasks.get(id).getEpicId()).getSubtaskId().remove(idSub);
@@ -251,6 +270,7 @@ public class InMemoryTaskManager implements TaskManager {
 
         startTimeEndTimeEpic(epicId);
         updateStatusEpic(epicId);
+        return null;
     }
 
     @Override
@@ -297,6 +317,13 @@ public class InMemoryTaskManager implements TaskManager {
         LocalDateTime endTime = null;
         int durationSum = 0;
 
+        if (epics.get(epicId).getSubtaskId() == null){  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            epics.get(epicId).setStartTime(startTime);
+            epics.get(epicId).setEndTime(endTime);
+            epics.get(epicId).setDuration(durationSum);
+            return;
+        }
+
         for(int idSub : epics.get(epicId).getSubtaskId()){
             durationSum += subtasks.get(idSub).getDuration();
 
@@ -331,7 +358,6 @@ public class InMemoryTaskManager implements TaskManager {
         if (task.getStartTime() == null){
             return true;
         }
-
         for (Task taskSet : startTimeSet) {
             if (taskSet.getStartTime() == null){
                 return true;

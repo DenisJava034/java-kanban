@@ -17,11 +17,11 @@ public interface TaskManager {
 
     ArrayList<Subtask> getListOfSubTasks();
 
-    void deleteAllTasks() throws IOException;
+    Object deleteAllTasks() throws IOException;
 
-    void deleteAllEpic() throws IOException;
+    Object deleteAllEpic() throws IOException;
 
-    void deleteAllSubtask() throws IOException;
+    Object deleteAllSubtask() throws IOException;
 
     Task getTaskById(int id) throws IOException;
 
@@ -41,17 +41,19 @@ public interface TaskManager {
 
     void updateSubtask(Subtask subtask) throws IOException;
 
-    void deleteTaskById(int id) throws IOException;
+    Object deleteTaskById(int id) throws IOException;
 
-    void deleteEpicById(int id) throws IOException;
+    Object deleteEpicById(int id) throws IOException;
 
-    void deleteSubtaskById(int id) throws IOException;
+    Object deleteSubtaskById(int id) throws IOException;
 
     ArrayList<Subtask> getListSubtaskByEpicId(int id);
 
     List<Task> getHistory();
 
     TreeSet getPrioritizedTasks();
+
+
 
 
 }

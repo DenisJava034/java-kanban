@@ -1,0 +1,13 @@
+id,type,name,status,description,epic,start,duration
+5,TASK,Новая с датой,NEW,Test addNewTask description1,null,0
+7,TASK,Новая с датой,NEW,Test addNewTask description1,null,0
+9,TASK,Test addNewTask1,DONE,Test addNewTask description1,2007-12-08T02:51:16,70
+10,TASK,Новая с датой,NEW,Test addNewTask description1,null,0
+2,EPIC,ура,IN_PROGRESS,33355333,2023-02-06T10:14:16,208
+8,EPIC,Новый Эпик,DONE,3333333,2010-01-01T10:33:45,1150
+11,EPIC,Новый Эпик,NEW,3333333,null,0
+3,SUBTASK,Test addNewSubtask,NEW,Test addNewSubtask description,2,2023-02-06T10:14:16,120
+4,SUBTASK,Новая,DONE,Yuhbh,2,2031-01-01T10:33:08,88
+12,SUBTASK,Новая,DONE,Yuhbh,8,2010-01-01T10:33:45,1150
+
+3,9,7,4,8,2,
