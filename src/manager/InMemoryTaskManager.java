@@ -186,8 +186,9 @@ public class InMemoryTaskManager implements TaskManager {
             }
         }
 
-        if (isTrue && epics.get(epic.getId()).getDuration() == epic.getDuration()) {// Проверка на то что не были изменены
-            epic.setSubtaskId(epics.get(epic.getId()).getSubtaskId());           // поля которые должны расчитываться
+        if (isTrue && epics.get(epic.getId()).getDuration() == epic.getDuration()) {
+                                                                                   // Проверка на то что не были изменены
+            epic.setSubtaskId(epics.get(epic.getId()).getSubtaskId());            // поля которые должны расчитываться
             epics.put(epic.getId(), epic);                                       // автоматически исходя из подзадач.
 
             updateStatusEpic(epics.get(epic.getId()).getId());
