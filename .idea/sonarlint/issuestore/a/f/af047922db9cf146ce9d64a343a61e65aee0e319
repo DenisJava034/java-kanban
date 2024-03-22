@@ -1,0 +1,23 @@
+
+
+java:S1192C"]Define a constant instead of duplicating this literal "Test addNewEpic description1" 3 times.(ùõœ×úÿÿÿÿJ$200ceec9-3495-4394-a9c9-f6728fd73dee
+’
+java:S1192C"QDefine a constant instead of duplicating this literal "Test addNewEpic1" 3 times.(ùõœ×úÿÿÿÿJ$1841e136-ed1f-43fb-93c3-121a156e31c2
+’
+java:S1192"QDefine a constant instead of duplicating this literal "FileSaveTest.csv" 5 times.(ßû°”şÿÿÿÿJ$05693efd-9eb1-47b9-8a9d-429be820d26b
+¢
+java:S11927"aDefine a constant instead of duplicating this literal "Ğ˜ÑÑ‚Ğ¾Ñ€Ğ¸Ñ Ğ½Ğµ Ğ¿ÑƒÑÑ‚Ğ°Ñ" 3 times.(Ñè†šüÿÿÿÿJ$749998d1-875e-468d-b7f5-92d136f196a7
+—
+java:S1192."VDefine a constant instead of duplicating this literal "Ğ¤Ğ°Ğ¹Ğ» Ğ¿ÑƒÑÑ‚Ğ¾Ğ¹" 4 times.(‰øêùÿÿÿÿJ$82c99ced-4191-4a9c-9693-ca3dee894d6f
+œ
+java:S1192#"[Define a constant instead of duplicating this literal "Ğ¤Ğ°Ğ¹Ğ» Ğ½Ğµ Ğ¿ÑƒÑÑ‚Ğ¾Ğ¹" 4 times.(¡ĞÑ¹ÿÿÿÿÿJ$2a8858df-c61c-435c-b9dc-e940d88ab094
+ª
+java:S1488"nImmediately return this expression instead of assigning it to the temporary variable "fileBackedTasksManager".(„ğş¹J$5218046a-9d68-48b1-b93d-8d639aca5d74
+„
+java:S2095 "HUse try-with-resources or close this "FileWriter" in a "finally" clause.(øÓóÊJ$6445fafd-30db-48e9-92ef-7f40695eab64
+„
+java:S2095a"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(øÓóÊJ$919173d5-ced2-4dc5-9792-bd5ef62c96aa
+„
+java:S2095y"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(øÓóÊJ$3e587639-ceaa-4513-9983-8ac4d09d84b2
+„
+java:S2095="HUse try-with-resources or close this "FileWriter" in a "finally" clause.(øÓóÊJ$8ba7ec92-d438-4b59-8d65-ea5861e76490

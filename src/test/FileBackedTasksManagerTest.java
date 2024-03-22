@@ -1,7 +1,6 @@
 package test;
 
 import manager.FileBackedTasksManager;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tasks.Epic;
 import tasks.Subtask;
@@ -20,7 +19,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager> {
-
 
     public FileBackedTasksManager createManager() {
         File file = new File("FileSaveTest.csv");
