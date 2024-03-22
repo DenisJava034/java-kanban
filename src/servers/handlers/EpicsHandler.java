@@ -91,7 +91,7 @@ public class EpicsHandler implements HttpHandler {
                             String body = ServerUtility.readText(httpExchange);
                             Epic epic;
                             try {
-                                epic = gson.fromJson(body, Epic.class); // Создаем TEpic
+                                epic = gson.fromJson(body, Epic.class); // Создаем Epic
                             } catch (JsonSyntaxException e) {
                                 httpExchange.sendResponseHeaders(400, 0);
                                 break;
@@ -135,7 +135,7 @@ public class EpicsHandler implements HttpHandler {
                                 httpExchange.sendResponseHeaders(201, 0);
                                 break;
                             } else {
-                                System.out.println("Получен некорректный id" + id);
+                                System.out.println("Получен неверный id" + id);
                                 httpExchange.sendResponseHeaders(404, 0);
                                 break;
                             }

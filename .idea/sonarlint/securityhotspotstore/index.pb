@@ -19,3 +19,7 @@ L
 test/HistoryManagerTest.java,b\5\b574116e60adb0c45f904287e4a42e3cd3238047
 T
 $test/FileBackedTasksManagerTest.java,f\9\f9b0cf3e66a6180b11fcd1b84c805c367abdaccb
+V
+&src/servers/handlers/EpicsHandler.java,d\b\db6362337fa6006aff861ff2e911fc30009c927b
+V
+&test/test/InMemoryTaskManagerTest.java,f\3\f367bdf26552b1608a673018a347d4df75e42088
