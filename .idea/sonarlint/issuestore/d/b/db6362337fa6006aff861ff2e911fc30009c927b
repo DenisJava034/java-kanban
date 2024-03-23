@@ -1,22 +1,22 @@
 
 ¬
-java:S11925"kDefine a constant instead of duplicating this literal "ĞŸĞ¾Ğ»ÑƒÑ‡ĞµĞ½ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ id" 3 times.(ÑèäâúÿÿÿÿJ$60f656e8-863f-4816-9c65-dc273d8c834a
+java:S11925"kDefine a constant instead of duplicating this literal "ĞŸĞ¾Ğ»ÑƒÑ‡ĞµĞ½ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ id" 3 times.(ÑèäâúÿÿÿÿJ$a4b51266-8b18-4d1d-8d48-6199b9cb87b4
 …
-java:S1192""IDefine a constant instead of duplicating this literal "^/epics$" 3 times.(ÑÁ¥ÄJ$333b0272-cbc3-4816-9fbc-025e1040ac9a
+java:S1192""IDefine a constant instead of duplicating this literal "^/epics$" 3 times.(ÑÁ¥ÄJ$5b247d03-40f1-4dff-80bc-32b5ad0c32a9
 v
-java:S1141]"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$cf8e3ea5-481a-4ff5-b491-b5fba3f1628c
+java:S1141["5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$3558e981-d394-406b-b83c-ec9e4d9e6359
 v
-java:S1141z"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$adc91f2a-58a0-41d6-ac6f-3121df6d034d
+java:S1141x"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$f4e43939-c9a4-4698-ac0c-69b1ee23d4f4
 “
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 86 to the 15 allowed.(êÑàüÿÿÿÿJ$4c1fa8e9-655b-4940-82f9-713a8fcfdcae
-‡	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(›²ÛêJ$c9cb1086-b81b-4240-9c42-060267e2251a
-]	java:S131""Add a default case to this switch.(ÜíÁôJ$bc709d8c-3608-40e3-9454-7b0114755010
-k	java:S1065"+Replace this use of System.out by a logger.(ÑèäâúÿÿÿÿJ$458a553d-21e5-468f-a600-7ba9e099a003
-k	java:S106L"+Replace this use of System.out by a logger.(ÑèäâúÿÿÿÿJ$bdc90ae1-01a5-453b-8417-b64727ed1a1e
-f	java:S106S"+Replace this use of System.out by a logger.(Å·´J$ea753bea-e8c4-40e8-8e56-fff91784d11d
-l	java:S106Š"+Replace this use of System.out by a logger.(ù¯´ñùÿÿÿÿJ$f7ec327e-ab3e-44c3-a2be-d2229b845676
-l	java:S106"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿJ$fa0cb254-a4e0-4b93-9a8d-fbf15961dd9a
-l	java:S106§"+Replace this use of System.out by a logger.(›“æşÿÿÿÿJ$e59337bf-921b-4d21-840f-074e0ccf969a
-l	java:S106­"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿJ$6fa043e9-7b76-4561-bdf9-ae733581e305
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 86 to the 15 allowed.(êÑàüÿÿÿÿJ$dc082587-7cff-4ef2-b3ea-2f649487d624
+‡	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(›²ÛêJ$81d16266-4309-446d-9be7-f2eb86207f90
+]	java:S131""Add a default case to this switch.(ÜíÁôJ$f85f7168-5cb3-42b5-93c7-fe0dbe15b69f
+k	java:S1065"+Replace this use of System.out by a logger.(ÑèäâúÿÿÿÿJ$a9e938b9-f7eb-4973-938c-d4be48dc7d26
+k	java:S106L"+Replace this use of System.out by a logger.(ÑèäâúÿÿÿÿJ$43f36f0a-435b-4640-a0e5-8cc404e5d765
+f	java:S106R"+Replace this use of System.out by a logger.(Å·´J$7052a7ee-0105-40fe-a63b-917c9c7bc906
+l	java:S106ˆ"+Replace this use of System.out by a logger.(ù¯´ñùÿÿÿÿJ$850266af-aa24-4ab6-9001-50e61fd461ff
+l	java:S106"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿJ$8d6007f9-ca9c-42da-95a5-ccd505271a9d
+l	java:S106¥"+Replace this use of System.out by a logger.(›“æşÿÿÿÿJ$66375a1b-c784-4a04-a382-54c84cf844f2
+l	java:S106«"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿJ$0ddb2d05-0a2b-4058-b223-359a9335c61c
 ˆ
-java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 143 to 64, Complexity from 22 to 14, Nesting Level from 6 to 2, Number of Variables from 24 to 6.(êÑàüÿÿÿÿJ$5aa6ecb6-eeda-4f45-9af2-719ca62f8189
+java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 143 to 64, Complexity from 22 to 14, Nesting Level from 6 to 2, Number of Variables from 24 to 6.(êÑàüÿÿÿÿJ$47995d3f-4a96-400c-9648-2f130f866fc2

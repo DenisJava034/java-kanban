@@ -78,12 +78,10 @@ public class EpicsHandler implements HttpHandler {
                                 break;
                             }
                         }
-
                     } else {
                         System.out.println("Не верный адрес" + path);
                         httpExchange.sendResponseHeaders(404, 0);
                     }
-
                 }
                 case "POST": {
                     if (Pattern.matches("^/epics$", path)) {
