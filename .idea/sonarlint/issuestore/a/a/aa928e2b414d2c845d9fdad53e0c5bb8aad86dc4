@@ -1,0 +1,31 @@
+
+’
+java:S1192’"UDefine a constant instead of duplicating this literal " Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ½Ğ¾" 6 times.(Î÷‰J$7e725865-5047-4489-92b8-486383f765a6
+¯
+java:S1192q"sDefine a constant instead of duplicating this literal "Ğ˜Ğ¼ĞµĞµÑ‚ÑÑ Ğ¿ĞµÑ€ĞµÑĞµÑ‡ĞµĞ½Ğ¸Ğµ Ğ·Ğ°Ğ´Ğ°Ñ‡Ğ¸" 4 times.(ÔãâJ$f993d233-431a-4020-8ab5-d25e9451413d
+š	java:S135Ş"YReduce the total number of break and continue statements in this loop to use at most one.(¨¡ÎˆÿÿÿÿÿJ$ca29da36-bb99-4730-a9c5-8c52b3aa6119
+¦
+java:S1488"eImmediately return this expression instead of assigning it to the temporary variable "taskArrayList".(»œù˜ıÿÿÿÿJ$cd6d684e-24b8-46a2-9ac7-b86582a6faf1
+¡
+java:S1488"eImmediately return this expression instead of assigning it to the temporary variable "epicArrayList".(ïÒŠ¦J$918b7f8d-4478-4697-bfd2-432cd3399b40
+©
+java:S1488%"hImmediately return this expression instead of assigning it to the temporary variable "subtaskArrayList".(ïõœªùÿÿÿÿJ$e60e8712-e19a-4832-9443-2603300b0a6d
+|
+java:S2864G"4Iterate over the "entrySet" instead of the "keySet".(çßÃ™úÿÿÿÿ8Ê”Öÿæ1J$24ed285b-9ec8-4e6c-827b-a8fd860cbfd0
+m	java:S106q"+Replace this use of System.out by a logger.(Ôãâ8Î”Öÿæ1J$c496a960-d776-4449-afaa-cac58778c5e1
+n	java:S106‰"+Replace this use of System.out by a logger.(Ôãâ8Ñ”Öÿæ1J$7bee8685-8e14-4b51-bdc6-909898b660f5
+n	java:S106’"+Replace this use of System.out by a logger.(Î÷‰8Ò”Öÿæ1J$5ca09d6a-0a56-40db-8965-76aba9dc541e
+n	java:S106"+Replace this use of System.out by a logger.(Ôãâ8Ô”Öÿæ1J$55ce45f6-bf15-4d5c-9bc7-572cc325f936
+s	java:S106¦"+Replace this use of System.out by a logger.(ëèÑ‚şÿÿÿÿ8Õ”Öÿæ1J$b948ded1-df4e-4cd0-aba1-dd249c6e5d03
+n	java:S106À"+Replace this use of System.out by a logger.(Ëª¬£8×”Öÿæ1J$5dbba1cb-e6f5-4702-87a4-200b4726d5f9
+s	java:S106Ê"+Replace this use of System.out by a logger.(èá€ˆùÿÿÿÿ8Ø”Öÿæ1J$fbf85279-7bde-41df-a301-42832d87f29b
+n	java:S106Ù"+Replace this use of System.out by a logger.(Ôãâ8Ù”Öÿæ1J$39bdd651-a58c-4b65-8abb-3ce93f4de769
+n	java:S106â"+Replace this use of System.out by a logger.(İÔ©÷8Ú”Öÿæ1J$62d9a173-c34b-43f3-9dd1-528846ad23f6
+n	java:S106í"+Replace this use of System.out by a logger.(‰ë°°8Û”Öÿæ1J$fff0e1ae-8d36-49b1-a0d8-e2bf87ba0c25
+n	java:S106ı"+Replace this use of System.out by a logger.(ú©ù÷8Ü”Öÿæ1J$b3f4d22d-c798-4113-81d5-c375a1945c8d
+–
+java:S3776°"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ˆ¦ıÇ8ä”Öÿæ1J$a1dbc1b2-c47a-418f-b3bb-b7db5698cd9c
+_
+java:S3626å"Remove this redundant jump.(ÉŠ©ƒ8é”Öÿæ1J$d13a1674-ea59-482d-9338-a26ad42629a3
+_
+java:S3626ë"Remove this redundant jump.(ÉŠ©ƒ8é”Öÿæ1J$c870a36e-e279-48c4-a2e9-2a4f06997a4e

@@ -93,10 +93,9 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                 LocalDateTime startTime = null;
                 return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         startTime, Integer.parseInt(str[6]));
-            } else {
+            }
                 return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
-            }
         }
         if (str[1].equals("EPIC")) {
             if (str[5].equals("null")) {
@@ -178,24 +177,21 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
     }
 
     @Override
-    public Object deleteAllTasks() {
+    public void deleteAllTasks() {
         super.deleteAllTasks();
         save();
-        return null;
     }
 
     @Override
-    public Object deleteAllEpic() {
+    public void deleteAllEpic() {
         super.deleteAllEpic();
         save();
-        return null;
     }
 
     @Override
-    public Object deleteAllSubtask() {
+    public void deleteAllSubtask() {
         super.deleteAllSubtask();
         save();
-        return null;
     }
 
     @Override
@@ -256,24 +252,21 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
     }
 
     @Override
-    public Object deleteTaskById(int id) {
+    public void deleteTaskById(int id) {
         super.deleteTaskById(id);
         save();
-        return null;
     }
 
     @Override
-    public Object deleteEpicById(int id) {
+    public void deleteEpicById(int id) {
         super.deleteEpicById(id);
         save();
-        return null;
     }
 
     @Override
-    public Object deleteSubtaskById(int id) {
+    public void deleteSubtaskById(int id) {
         super.deleteSubtaskById(id);
         save();
-        return null;
     }
 
     @Override

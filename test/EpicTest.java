@@ -1,5 +1,3 @@
-package test;
-
 import manager.FileBackedTasksManager;
 import manager.TaskManager;
 import org.junit.jupiter.api.BeforeEach;

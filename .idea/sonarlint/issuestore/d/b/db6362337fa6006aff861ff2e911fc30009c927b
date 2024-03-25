@@ -1,22 +1,28 @@
 
-¬
-java:S11925"kDefine a constant instead of duplicating this literal "ĞŸĞ¾Ğ»ÑƒÑ‡ĞµĞ½ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ñ‹Ğ¹ id" 3 times.(ÑèäâúÿÿÿÿJ$a4b51266-8b18-4d1d-8d48-6199b9cb87b4
-…
-java:S1192""IDefine a constant instead of duplicating this literal "^/epics$" 3 times.(ÑÁ¥ÄJ$5b247d03-40f1-4dff-80bc-32b5ad0c32a9
-v
-java:S1141["5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$3558e981-d394-406b-b83c-ec9e4d9e6359
-v
-java:S1141x"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$f4e43939-c9a4-4698-ac0c-69b1ee23d4f4
-“
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 86 to the 15 allowed.(êÑàüÿÿÿÿJ$dc082587-7cff-4ef2-b3ea-2f649487d624
-‡	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(›²ÛêJ$81d16266-4309-446d-9be7-f2eb86207f90
-]	java:S131""Add a default case to this switch.(ÜíÁôJ$f85f7168-5cb3-42b5-93c7-fe0dbe15b69f
-k	java:S1065"+Replace this use of System.out by a logger.(ÑèäâúÿÿÿÿJ$a9e938b9-f7eb-4973-938c-d4be48dc7d26
-k	java:S106L"+Replace this use of System.out by a logger.(ÑèäâúÿÿÿÿJ$43f36f0a-435b-4640-a0e5-8cc404e5d765
-f	java:S106R"+Replace this use of System.out by a logger.(Å·´J$7052a7ee-0105-40fe-a63b-917c9c7bc906
-l	java:S106ˆ"+Replace this use of System.out by a logger.(ù¯´ñùÿÿÿÿJ$850266af-aa24-4ab6-9001-50e61fd461ff
-l	java:S106"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿJ$8d6007f9-ca9c-42da-95a5-ccd505271a9d
-l	java:S106¥"+Replace this use of System.out by a logger.(›“æşÿÿÿÿJ$66375a1b-c784-4a04-a382-54c84cf844f2
-l	java:S106«"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿJ$0ddb2d05-0a2b-4058-b223-359a9335c61c
-ˆ
-java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 143 to 64, Complexity from 22 to 14, Nesting Level from 6 to 2, Number of Variables from 24 to 6.(êÑàüÿÿÿÿJ$47995d3f-4a96-400c-9648-2f130f866fc2
+Œ
+java:S1192#"IDefine a constant instead of duplicating this literal "^/epics$" 3 times.(ÑÁ¥Ä8»¹Ïªç1J$24cd6df2-2107-41e0-8e9d-673d243a6635
+}
+java:S1141,"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8½¹Ïªç1J$bb378e1f-9b5d-4b6f-bae3-32542327fe30
+}
+java:S1141@"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8½¹Ïªç1J$d75b8d88-9e93-4548-952a-18597ff3e2a8
+}
+java:S1141Z"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8½¹Ïªç1J$cc8f8acc-8800-4bee-9a58-abd019793a0b
+}
+java:S1141o"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8½¹Ïªç1J$288e6959-a20f-453e-9bb3-7109005f1bef
+}
+java:S1141{"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8½¹Ïªç1J$0b399052-b912-4b31-a54f-b82ee9dcc02b
+~
+java:S1141›"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8½¹Ïªç1J$8ba9edea-d8d2-496b-9913-bb7b81a7c96b
+š
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 76 to the 15 allowed.(êÑàüÿÿÿÿ8ó¹Ïªç1J$37a932da-0ea0-4b2c-b43b-80c834083bfe
+	java:S128 "LEnd this switch case with an unconditional break, return or throw statement.(›²Ûê8ö¹Ïªç1J$d4d562b2-d6d8-4aa7-9b41-c638452b5d64
+d	java:S131""Add a default case to this switch.(ÜíÁô8ö¹Ïªç1J$5c8af534-ca2e-495b-b2bc-03fe66d84293
+r	java:S106/"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8ø¹Ïªç1J$6c6c6a22-59d3-448e-a835-c2d72f1f834c
+r	java:S106C"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8ù¹Ïªç1J$daeb3830-1457-4456-b238-966bbea0e5b2
+m	java:S106Q"+Replace this use of System.out by a logger.(Å·´8ú¹Ïªç1J$d04374bb-e1c6-47cc-8db2-564051d32079
+r	java:S106r"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8û¹Ïªç1J$fc885844-d19c-448e-a6b7-567d80246acf
+s	java:S106Œ"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿ8ü¹Ïªç1J$19bc2b74-4c5b-4d01-8187-3e58e894ad1b
+s	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8‡ºÏªç1J$bd178b6e-66b2-49d0-8fc0-19d922b51fb2
+s	java:S106«"+Replace this use of System.out by a logger.(ßîî´ûÿÿÿÿ8‰ºÏªç1J$190e479d-6bf9-41a8-9346-a27253e1c25e
+
+java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 147 to 64, Complexity from 18 to 14, Nesting Level from 5 to 2, Number of Variables from 28 to 6.(êÑàüÿÿÿÿ8ŠºÏªç1J$e0ae072b-e8ab-4df2-8b80-dc4617fc3df2

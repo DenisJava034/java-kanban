@@ -1,5 +1,3 @@
-package test;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import manager.FileBackedTasksManager;

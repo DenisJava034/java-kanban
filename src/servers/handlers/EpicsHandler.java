@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import exception.FormatIdException;
 import manager.TaskManager;
 import servers.util.ServerUtility;
 import tasks.Epic;
@@ -38,45 +39,43 @@ public class EpicsHandler implements HttpHandler {
                         }
                         if (Pattern.matches("^/epics/\\d+$", path)) {
                             String pathId = path.replaceFirst("/epics/", "");
-                            int id = ServerUtility.getId(pathId);
+                            int id;
 
-                            if (id != -1) {
-                                String response = gson.toJson(taskManager.getEpicById(id));
-                                if (response.equals("null")) {
-                                    httpExchange.sendResponseHeaders(404, 0);
-                                    break;
-                                }
-                                ServerUtility.sendText(httpExchange, response, 200);
-                                break;
-
-                            } else {
-                                System.out.println("Получен некорректный id" + pathId);
+                            try {
+                                id = ServerUtility.getId(pathId);
+                            } catch (NumberFormatException | FormatIdException e) {
+                                System.out.println(e.getMessage());
                                 httpExchange.sendResponseHeaders(404, 0);
                                 break;
                             }
+
+                            String response = gson.toJson(taskManager.getEpicById(id));
+                            if (response.equals("null")) {
+                                httpExchange.sendResponseHeaders(404, 0);
+                                break;
+                            }
+                            ServerUtility.sendText(httpExchange, response, 200);
+                            break;
                         }
 
                         if (Pattern.matches("^/epics/+\\d+/subtasks$", path)) {
-
                             String pathId = path.split("/")[2];
-                            int id = ServerUtility.getId(pathId);
-
-                            if (id != -1) {
-
-                                String response = gson.toJson(taskManager.getEpicById(id)); //проверка на наличие Эпика
-                                if (response.equals("null")) {
-                                    httpExchange.sendResponseHeaders(404, 0);
-                                    break;
-                                }
-                                response = gson.toJson(taskManager.getListSubtaskByEpicId(id));
-                                ServerUtility.sendText(httpExchange, response, 200);
-                                break;
-
-                            } else {
-                                System.out.println("Получен некорректный id" + pathId);
+                            int id;
+                            try {
+                                id = ServerUtility.getId(pathId);
+                            } catch (NumberFormatException | FormatIdException e) {
+                                System.out.println(e.getMessage());
                                 httpExchange.sendResponseHeaders(404, 0);
                                 break;
                             }
+                            String response = gson.toJson(taskManager.getEpicById(id)); //проверка на наличие Эпика
+                            if (response.equals("null")) {
+                                httpExchange.sendResponseHeaders(404, 0);
+                                break;
+                            }
+                            response = gson.toJson(taskManager.getListSubtaskByEpicId(id));
+                            ServerUtility.sendText(httpExchange, response, 200);
+                            break;
                         }
                     } else {
                         System.out.println("Не верный адрес" + path);
@@ -105,38 +104,37 @@ public class EpicsHandler implements HttpHandler {
 
                         } else {
                             String idParam = query.substring(3);
-                            int id = ServerUtility.getId(idParam);
-
+                            int id;
                             String body = ServerUtility.readText(httpExchange); //получаем тело
                             Epic epic;
 
-                            if (id != -1) {
-                                String response = gson.toJson(taskManager.getEpicById(id));
-                                if (response.equals("null")) {  // если нет такой заачи
-                                    httpExchange.sendResponseHeaders(404, 0);
-                                    break;
-                                }
-
-                                try {
-                                    epic = gson.fromJson(body, Epic.class); // Создаем Epic
-                                } catch (JsonSyntaxException e) {
-                                    httpExchange.sendResponseHeaders(400, 0);
-                                    break;
-                                }
-                                taskManager.updateEpic(epic);
-
-                                if (!taskManager.getListOfEpics().contains(epic)) {   // Если задача не обновилась, то есть
-                                    httpExchange.sendResponseHeaders(406, 0); // пересечения
-                                    break;
-                                }
-
-                                httpExchange.sendResponseHeaders(201, 0);
-                                break;
-                            } else {
-                                System.out.println("Получен неверный id" + id);
+                            try {
+                                id = ServerUtility.getId(idParam);
+                            } catch (NumberFormatException | FormatIdException e) {
+                                System.out.println(e.getMessage());
                                 httpExchange.sendResponseHeaders(404, 0);
                                 break;
                             }
+                            String response = gson.toJson(taskManager.getEpicById(id));
+                            if (response.equals("null")) {  // если нет такой заачи
+                                httpExchange.sendResponseHeaders(404, 0);
+                                break;
+                            }
+                            try {
+                                epic = gson.fromJson(body, Epic.class); // Создаем Epic
+                            } catch (JsonSyntaxException e) {
+                                httpExchange.sendResponseHeaders(400, 0);
+                                break;
+                            }
+                            taskManager.updateEpic(epic);
+
+                            if (!taskManager.getListOfEpics().contains(epic)) {   // Если задача не обновилась, то есть
+                                httpExchange.sendResponseHeaders(406, 0); // пересечения
+                                break;
+                            }
+
+                            httpExchange.sendResponseHeaders(201, 0);
+                            break;
                         }
                     } else {
                         System.out.println("Получен некорректный адрес" + path);
@@ -152,20 +150,22 @@ public class EpicsHandler implements HttpHandler {
                             break;
                         } else {
                             String idParam = query.substring(3);
-                            int id = ServerUtility.getId(idParam);
-                            if (id != -1) {
-                                String response = gson.toJson(taskManager.getEpicById(id));
-                                if (response.equals("null")) {  // если null то закой задачи нет
-                                    httpExchange.sendResponseHeaders(404, 0);
-                                    break;
-                                }
-                                taskManager.deleteEpicById(id);
-                                httpExchange.sendResponseHeaders(200, 0);
-                            } else {
-                                System.out.println("Получен некорректный id" + idParam);
+                            int id;
+
+                            try {
+                                id = ServerUtility.getId(idParam);
+                            } catch (NumberFormatException | FormatIdException e) {
+                                System.out.println(e.getMessage());
                                 httpExchange.sendResponseHeaders(404, 0);
                                 break;
                             }
+                            String response = gson.toJson(taskManager.getEpicById(id));
+                            if (response.equals("null")) {  // если null то закой задачи нет
+                                httpExchange.sendResponseHeaders(404, 0);
+                                break;
+                            }
+                            taskManager.deleteEpicById(id);
+                            httpExchange.sendResponseHeaders(200, 0);
                         }
                     } else {
                         System.out.println("Получен некорректный адрес" + path);
