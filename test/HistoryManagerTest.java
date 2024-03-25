@@ -1,5 +1,3 @@
-package test;
-
 import manager.FileBackedTasksManager;
 import manager.TaskManager;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,7 +21,6 @@ class HistoryManagerTest {
     @BeforeEach
     public void createManager() {
         File file = new File("FileSaveTest.csv");
-
         taskManager = new FileBackedTasksManager(file);
     }
 
@@ -111,7 +108,7 @@ class HistoryManagerTest {
         historyCheck.add(epic1);
         historyCheck.add(subtask2);
 
-        assertEquals(historyListInManager.size(), historyCheck.size(), "Размеры списков истории  не равны");
+        assertEquals(historyListInManager.size(), historyCheck.size(), "Размеры списков истории не равны");
         assertTrue(historyListInManager.containsAll(historyCheck), "Списки не совпадают");
     }
 
@@ -161,11 +158,6 @@ class HistoryManagerTest {
         assertEquals(0, taskManager.getHistory().size(), "Количество задач в истории не равно 0");
         assertFalse(taskManager.getHistory().contains(epic1), "Подзадача не удалена из истории");
     }
-
-
-
-
-
 
 
 }

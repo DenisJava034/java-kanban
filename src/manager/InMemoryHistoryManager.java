@@ -1,5 +1,7 @@
 package manager;
+
 import tasks.Task;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -8,11 +10,11 @@ public class InMemoryHistoryManager implements HistoryManager {
     private Node head;
     private Node tail;
 
-    private void LinkLast (Task task) {
+    private void linkLast(Task task) {
         removeNode(task.getId());
         Node newNode = new Node(task, tail, null);
         removeNode(task.getId());
-        if (mapNode.isEmpty()){
+        if (mapNode.isEmpty()) {
             head = newNode;
             tail = newNode;
             mapNode.put(task.getId(), newNode);
@@ -28,8 +30,8 @@ public class InMemoryHistoryManager implements HistoryManager {
         ArrayList<Task> taskList = new ArrayList<>();
         Node hubNode = head;
         while (hubNode != null) {
-                taskList.add(hubNode.task);
-                hubNode = hubNode.next;
+            taskList.add(hubNode.task);
+            hubNode = hubNode.next;
         }
         return taskList;
     }
@@ -39,13 +41,13 @@ public class InMemoryHistoryManager implements HistoryManager {
         Node node = mapNode.remove(id);
         if (node == null) {
             return;
-        } else if(node.prev == null && node.next == null) {
+        } else if (node.prev == null && node.next == null) {
             head = null;
             tail = null;
-        } else if(node.prev == null) {
+        } else if (node.prev == null) {
             head = node.next;
             node.next.prev = null;
-        } else if (node.next == null){
+        } else if (node.next == null) {
             tail = node.prev;
             //tail = node;
             node.prev.next = null;
@@ -57,12 +59,12 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public void addTaskOfListHistory(Task task) {
-        LinkLast(task);
+        linkLast(task);
     }
 
     @Override
     public ArrayList<Task> getHistory() {
-        ArrayList<Task> copyHistory =  getTask();
+        ArrayList<Task> copyHistory = getTask();
         return copyHistory;
     }
 

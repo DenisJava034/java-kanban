@@ -85,36 +85,35 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         return fileBackedTasksManager;
     }
 
-    private static Task fromString(String value) {
+    public static Task fromString(String value) {
         String[] str = value.split(",");
 
         if (str[1].equals("TASK")) {
-            if (str[5].equals("null")){
+            if (str[5].equals("null")) {
                 LocalDateTime startTime = null;
                 return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         startTime, Integer.parseInt(str[6]));
-            }else {
+            }
                 return new Task(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
-            }
         }
         if (str[1].equals("EPIC")) {
-            if (str[5].equals("null")){
+            if (str[5].equals("null")) {
                 LocalDateTime startTime = null;
                 return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         startTime, Integer.parseInt(str[6]));
-            }else {
+            } else {
                 return new Epic(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                         LocalDateTime.parse(str[5]), Integer.parseInt(str[6]));
             }
         }
-        if (str[6].equals("null")){
+        if (str[6].equals("null")) {
             LocalDateTime startTime = null;
             return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
                     Integer.parseInt(str[5]), startTime, Integer.parseInt(str[7]));
         }
-            return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
-                    Integer.parseInt(str[5]), LocalDateTime.parse(str[6]), Integer.parseInt(str[7]));
+        return new Subtask(Integer.parseInt(str[0]), str[2], str[4], TaskStatus.valueOf(str[3]),
+                Integer.parseInt(str[5]), LocalDateTime.parse(str[6]), Integer.parseInt(str[7]));
     }
 
     private void save() {

@@ -1,5 +1,3 @@
-package test;
-
 import manager.FileBackedTasksManager;
 import manager.TaskManager;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,13 +21,12 @@ class EpicTest {
         taskManager = new FileBackedTasksManager(file);
     }
 
-   @Test
-   void returnsTheNewStatusIfTheListOfSubtasksIsEmpty() throws IOException {
-       Epic epic1 = new Epic("Test addNewEpic1", "Test addNewEpic description1", TaskStatus.NEW);
-       taskManager.createEpic(epic1);
-       assertEquals(TaskStatus.NEW, taskManager.getEpicById(1).getStatus(), "Неверный статус");
+    @Test
+    void returnsTheNewStatusIfTheListOfSubtasksIsEmpty() throws IOException {
+        Epic epic1 = new Epic("Test addNewEpic1", "Test addNewEpic description1", TaskStatus.NEW);
+        taskManager.createEpic(epic1);
+        assertEquals(TaskStatus.NEW, taskManager.getEpicById(1).getStatus(), "Неверный статус");
     }
-
 
     @Test
     void returnsTheStatusNewIfAllSubtasksHaveTheStatusNew() throws IOException {
@@ -102,12 +99,6 @@ class EpicTest {
 
         assertEquals(TaskStatus.IN_PROGRESS, taskManager.getEpicById(1).getStatus(), "Неверный статус");
     }
-
-
-
-
-
-
 
 
 }
