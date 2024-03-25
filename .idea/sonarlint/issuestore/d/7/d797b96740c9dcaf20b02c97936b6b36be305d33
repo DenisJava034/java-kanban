@@ -1,13 +1,0 @@
-
-‘
-java:S1192""NDefine a constant instead of duplicating this literal "ĞÑˆĞ¸Ğ±ĞºĞ° " 3 times.(œÎÁÒ8Ùÿ€ÿæ1J$97f94150-f581-4961-83b5-2816699fd7c1
-•
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(•õº¸8¯ÿæ1J$780bd9c2-295e-47fa-9c63-035d9cb0c7ae
-r
-java:S1905@"*Remove this unnecessary cast to "Subtask".(ÛôÍùùÿÿÿÿ8ºÿæ1J$b7412435-ea54-4970-b2e6-4bc9b6b61f69
-v
-java:S2864|"4Iterate over the "entrySet" instead of the "keySet".(šßÙ8Åÿæ1J$25d14086-bb92-42a3-b9b3-dc358a9a7cef
-x
-java:S2864"4Iterate over the "entrySet" instead of the "keySet".(Œë‡ç8Æÿæ1J$876a09a6-c7b4-470c-8639-3e2fe681dc66
-x
-java:S2864†"4Iterate over the "entrySet" instead of the "keySet".(µÚ—Ä8Çÿæ1J$fa9916d5-3f1c-4edc-b9e8-6c95f0fa3a59
