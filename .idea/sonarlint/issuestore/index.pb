@@ -21,8 +21,6 @@ T
 $test/FileBackedTasksManagerTest.java,f\9\f9b0cf3e66a6180b11fcd1b84c805c367abdaccb
 V
 &src/servers/handlers/EpicsHandler.java,d\b\db6362337fa6006aff861ff2e911fc30009c927b
-V
-&test/test/InMemoryTaskManagerTest.java,f\3\f367bdf26552b1608a673018a347d4df75e42088
 W
 'src/manager/FileBackedTasksManager.java,d\7\d797b96740c9dcaf20b02c97936b6b36be305d33
 W
